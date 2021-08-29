@@ -11,7 +11,7 @@ The number of such 23-mers is very large. Therefore, we next only extract those 
 ### Step 2: determining all exons in hg38
 1. Collected the hg38 gene annotations from here: http://hgdownload.cse.ucsc.edu/goldenpath/hg38/database/refGene.txt.gz
 1. Used the following code to list all exon coordinates in bed file
-`zcat refGene.txt.gz|sort -u -k13,13|cut -f3,10,11|awk 'BEGIN{OFS="\t"}{split($2,start,",");split($3,end,","); for(i=1;i<length(start);++i){print $1,start[i],end[i]}}' > exons.bed
+`zcat refGene.txt.gz|sort -u -k13,13|cut -f3,10,11,13|awk 'BEGIN{OFS="\t"}{split($2,start,",");split($3,end,","); for(i=1;i<length(start);++i){print $1,$4,start[i],end[i]}}' > exons.bed
 `
 
 The bed file is available in this repository.
