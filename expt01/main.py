@@ -1,11 +1,12 @@
 import dna_jellyfish as jellyfish
 
-def get_off_target_count(target_jf_file, genome_jf_file, kmer):
-	return 0
+def get_off_target_count(target_jf_file, genome_jf_file, kmer_str):
+	mer = jellyfish.MerDNA(kmer_str)
+	return genome_jf_file[mer]
 
 if __name__ == "__main__":
 	target_jf_filename = 'test'
-	genome_jf_filename = 'test'
+	genome_jf_filename = 'staphylococcus_genome.jf'
 	test_kmer = 'AGTCGTCGTCGTACGTGCGGG'
 	
 	target_qf = jellyfish.QueryMerFile(target_jf_filename)
