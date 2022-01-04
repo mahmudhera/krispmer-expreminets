@@ -3,6 +3,7 @@ import dna_jellyfish as jellyfish
 def get_off_target_count(target_jf_file, genome_jf_file, kmer_str):
 	mer = jellyfish.MerDNA(kmer_str)
 	mer.canonicalize()
+	print(genome_jf_file[mer], target_jf_file[mer])
 	return max(0, genome_jf_file[mer]-target_jf_file[mer])
 
 if __name__ == "__main__":
