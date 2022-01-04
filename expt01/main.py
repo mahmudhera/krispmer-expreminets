@@ -9,7 +9,7 @@ def get_off_target_count(target_jf_file, genome_jf_file, kmer_str):
 if __name__ == "__main__":
 	target_jf_filename = 'mer_counts.jf'
 	genome_jf_filename = 'staphylococcus_genome.jf'
-	test_kmer = 'AGTCGTCGTCGTACGTGCGGG'
+	test_kmer = 'CCAATTGGGGCCGTCTCTATAAT'
 	
 	target_qf = jellyfish.QueryMerFile(target_jf_filename)
 	genome_qf = jellyfish.QueryMerFile(target_jf_filename)
