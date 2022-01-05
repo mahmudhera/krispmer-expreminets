@@ -8,6 +8,7 @@ def get_off_target_count(target_jf_file, genome_jf_file, kmer_str):
 	cg1, ct1 = genome_jf_file[mer], target_jf_file[mer]
 	mer.canonicalize()
 	cg2, ct2 = genome_jf_file[mer], target_jf_file[mer]
+	print (cg1+cg2, ct1+ct2)
 	return max(0, cg1 + cg2 - ct1 - ct2)
 	
 def generate_jf_file(fasta_filename, jf_filename="temp"):
