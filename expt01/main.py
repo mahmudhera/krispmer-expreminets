@@ -20,9 +20,9 @@ def generate_jf_file(fasta_filename, jf_filename="temp"):
 if __name__ == "__main__":
 	genome_jf_filename = 'staphylococcus_genome.jf'
 	test_kmer = 'CCAATTGGGGCCGTCTCTATAAT'
-	
 	target_qf = generate_jf_file("../../../data/staphylococcusAureus/target1")
-	genome_qf = jellyfish.QueryMerFile(target_jf_filename)
+	
+	genome_qf = jellyfish.QueryMerFile(genome_jf_filename)
 	
 	x = get_off_target_count(target_qf, genome_qf, test_kmer)
 	print (x)
