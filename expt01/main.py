@@ -1,6 +1,7 @@
 import dna_jellyfish as jellyfish
 import subprocess
 import pandas as pd
+import sys
 
 def get_off_target_count(target_jf_file, genome_jf_file, kmer_str):
 	mer = jellyfish.MerDNA(kmer_str)
@@ -22,7 +23,7 @@ def get_list_of_grna_strings(scores_filename):
 	return pd.read_csv(scores_filename)['tgt_in_plus'].to_list()
 	
 if __name__ == "__main__":
-	if len(sys.args) < 2:
+	if len(sys.argv) < 2:
 		print("error")
 		sys.exit(-1)
 		
