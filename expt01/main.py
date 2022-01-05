@@ -8,7 +8,6 @@ def get_off_target_count(target_jf_file, genome_jf_file, kmer_str):
 	cg1, ct1 = genome_jf_file[mer], target_jf_file[mer]
 	mer.canonicalize()
 	cg2, ct2 = genome_jf_file[mer], target_jf_file[mer]
-	print(cg1 + cg2, ct1 + ct2)
 	return max(0, cg1 + cg2 - ct1 - ct2)
 	
 def generate_jf_file(fasta_filename, jf_filename="temp"):
@@ -23,15 +22,16 @@ def get_list_of_grna_strings(scores_filename):
 	return pd.read_csv(scores_filename)['tgt_in_plus'].to_list()
 	
 if __name__ == "__main__":
-	if len(sys.argv) < 2:
+	if len(sys.argv) < 4:
 		print("error")
+		print("usage: python main.py expt_num(int) genome_jf_filename folder_name")
 		sys.exit(-1)
 		
-	print(sys.argv[1])
-	genome_jf_filename = 'staphylococcus_genome.jf'
-	test_kmer = 'CCAATTGGGGCCGTCTCTATAAT'
-	target_qf = generate_jf_file("../../../data/staphylococcusAureus/target" + sys.argv[1])
-	grnas = get_list_of_grna_strings("../../../data/staphylococcusAureus/scores" + sys.argv[1])
+	print(sys.argv[1], sys.argv[2])
+	genome_jf_filename = sys.argv[2]
+	folder_name = sys.argv[3]
+	target_qf = generate_jf_file(folder_name + "/target" + sys.argv[1])
+	grnas = get_list_of_grna_strings(folder_name + "/scores" + sys.argv[1])
 	
 	genome_qf = jellyfish.QueryMerFile(genome_jf_filename)
 	
