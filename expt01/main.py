@@ -1,7 +1,6 @@
 import dna_jellyfish as jellyfish
 import subprocess
 import pandas as pd
-import sys
 
 def get_off_target_count(target_jf_file, genome_jf_file, kmer_str):
 	mer = jellyfish.MerDNA(kmer_str)
