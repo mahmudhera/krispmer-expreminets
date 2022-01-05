@@ -19,7 +19,7 @@ def generate_jf_file(fasta_filename, jf_filename="temp"):
 	return jellyfish.QueryMerFile(jf_filename)
 	
 def get_list_of_grnas(scores_filename):
-	l = pd.read_csv(scores_filename)[tgt_in_plus].to_list()
+	l = pd.read_csv(scores_filename)['tgt_in_plus'].to_list()
 	print (l)
 
 if __name__ == "__main__":
