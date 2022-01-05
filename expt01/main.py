@@ -1,6 +1,7 @@
 import dna_jellyfish as jellyfish
 import subprocess
 import pandas as pd
+import sys
 
 def get_off_target_count(target_jf_file, genome_jf_file, kmer_str):
 	mer = jellyfish.MerDNA(kmer_str)
@@ -22,10 +23,14 @@ def get_list_of_grna_strings(scores_filename):
 	return pd.read_csv(scores_filename)['tgt_in_plus'].to_list()
 	
 if __name__ == "__main__":
+	if len(sys.args) < 2:
+		print("error")
+		sys.exit(-1)
+		
 	genome_jf_filename = 'staphylococcus_genome.jf'
 	test_kmer = 'CCAATTGGGGCCGTCTCTATAAT'
-	target_qf = generate_jf_file("../../../data/staphylococcusAureus/target1")
-	grnas = get_list_of_grna_strings("../../../data/staphylococcusAureus/scores1")
+	target_qf = generate_jf_file("../../../data/staphylococcusAureus/target" + sys.argv[1])
+	grnas = get_list_of_grna_strings("../../../data/staphylococcusAureus/scores" + sys.argv[1])
 	
 	genome_qf = jellyfish.QueryMerFile(genome_jf_filename)
 	
