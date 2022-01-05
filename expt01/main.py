@@ -27,6 +27,7 @@ if __name__ == "__main__":
 		print("error")
 		sys.exit(-1)
 		
+	print(sys.argv[1])
 	genome_jf_filename = 'staphylococcus_genome.jf'
 	test_kmer = 'CCAATTGGGGCCGTCTCTATAAT'
 	target_qf = generate_jf_file("../../../data/staphylococcusAureus/target" + sys.argv[1])
