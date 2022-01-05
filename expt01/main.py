@@ -37,6 +37,4 @@ if __name__ == "__main__":
 	
 	for grna in grnas:
 		x = get_off_target_count(target_qf, genome_qf, grna)
-		print (x)
-	
-	print("compiles ok")
+		print (grna, x)
