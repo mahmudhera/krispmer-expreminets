@@ -26,7 +26,7 @@ if __name__ == "__main__":
 	genome_jf_filename = 'staphylococcus_genome.jf'
 	test_kmer = 'CCAATTGGGGCCGTCTCTATAAT'
 	target_qf = generate_jf_file("../../../data/staphylococcusAureus/target1")
-	
+	get_list_of_grnas("../../../data/staphylococcusAureus/scores1")
 	
 	genome_qf = jellyfish.QueryMerFile(genome_jf_filename)
 	
