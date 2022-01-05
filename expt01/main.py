@@ -36,7 +36,7 @@ if __name__ == "__main__":
 	genome_qf = jellyfish.QueryMerFile(genome_jf_filename)
 	
 	for grna in grnas:
-		x = get_off_target_count(target_qf, genome_qf, test_kmer)
+		x = get_off_target_count(target_qf, genome_qf, grna)
 		print (x)
 	
 	print("compiles ok")
