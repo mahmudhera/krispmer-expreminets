@@ -6,6 +6,20 @@ from get_cfd_score import get_score
 import trie
 from itertools import chain, combinations, product
 
+def complement(seq):
+    """
+    generates the complement sequence, e.g.: ACGT-->TCGA
+    :param seq: dna sequence
+    :return: complement
+    """
+    complement_char = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
+    bases = list(str(seq))
+    bases = [complement_char[base] for base in bases]
+    return ''.join(bases)
+
+def reverse_complement(s):
+    return complement(s[::-1])
+
 def hamming_circle(s, n, alphabet, trie):
     """Generate strings over alphabet whose Hamming distance from s is
     exactly n.
