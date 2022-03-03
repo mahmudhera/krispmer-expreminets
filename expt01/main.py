@@ -5,6 +5,7 @@ import sys
 from get_cfd_score import get_score
 import trie
 from itertools import chain, combinations, product
+import sys
 
 def complement(seq):
     """
@@ -153,8 +154,10 @@ if __name__ == "__main__":
 														qf_target, max_hd, target_count)
 	krispmer_scores = get_krispmer_scores(scores_filename)
 
+	sys.stdout = open(out_filename, 'w')
 	for grna in genome_scores.keys():
 		try:
 			print(grna, genome_scores[grna], krispmer_scores[grna])
 		except:
 			print(grna, genome_scores[grna], krispmer_scores[reverse_complement(grna)])
+	sys.stdout.close()
