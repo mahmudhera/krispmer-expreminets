@@ -3,7 +3,7 @@ import subprocess
 import pandas as pd
 import sys
 from get_cfd_score import get_score
-from Bio import trie
+import trie
 from itertools import chain, combinations, product
 
 def hamming_circle(s, n, alphabet, trie):
