@@ -73,7 +73,7 @@ if __name__ == "__main__":
 		target_count = 1
 
 	qf_target = generate_jf_file(target_filename)
-	qf_genome = jellyfish.QueryMerFile(jf_filename)
+	qf_genome = jellyfish.QueryMerFile(genome_jf_filename)
 
 	grnas_in_positive = get_list_of_grna_strings(scores_filename)
 	genome_scores = generate_inverted_specificity_from_genome(grnas_in_positive, qf_genome,
