@@ -6,6 +6,5 @@ The steps are as follows:
 
 1. Run for multiple genomes for a hd=3
 1. Generate jf file for the genome
-1. Parse a scores file
-1. Get a grna. Find the score using only the genome
-1. Write grna, our_score, score_w_genome
+1. Run commands like follows:
+python main.py ../runs-on-genomes/staphylococcus-aureus/mer_counts.jf ../runs-on-genomes/staphylococcus-aureus/target4.fasta ../runs-on-genomes/staphylococcus-aureus/scores4 3 staphylococcus-aureus/out_for_target4
