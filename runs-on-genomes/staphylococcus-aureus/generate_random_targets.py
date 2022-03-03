@@ -1,7 +1,7 @@
 from Bio import SeqIO
 import random
 
-fasta_filename = 'one_assembly.fasta'
+fasta_filename = 'genome.fasta'
 num_targets_each_chr = 15
 target_len_low = 2000
 target_len_high = 3000
