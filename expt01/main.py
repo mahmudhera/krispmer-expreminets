@@ -79,7 +79,16 @@ def generate_jf_file(fasta_filename, jf_filename="temp"):
 
 # returns grnas in +ve strand
 def get_list_of_grna_strings(scores_filename):
-	return pd.read_csv(scores_filename)['tgt_in_plus'].to_list()
+	plus_ = pd.read_csv(scores_filename)['tgt_in_plus'].to_list()
+	minus_ = pd.read_csv(scores_filename)['tgt_in_minus'].to_list()
+	strand_ = pd.read_csv(scores_filename)['stand'].to_list()
+	grnas = []
+	for (p, m, s) in list(zip(plus_, minus_ strand_)):
+		if s == '+':
+			grnas.append(p)
+		else:
+			grnas.append(m)
+	return grnas
 
 
 def generate_inverted_specificity_from_genome(guides, qf_genome, qf_target, max_hd = 3, target_count = 1):
