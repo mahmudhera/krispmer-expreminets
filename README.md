@@ -11,9 +11,17 @@ shudhu ajker jonno
 Had to do the following:
 ```
 export PYTHONPATH=/home/atif/krispmer/soft/krispmer-github-repo/kRISP-mER/kRISP-meR_source:$PYTHONPATH
+export PATH=/home/atif/krispmer/soft/bowtie2-2.4.5-linux-x86_64:$PATH
 ```
 
-## Deliverables for meeting on Feb 24
-1. Fix the -1 bug in the tool
-1. Fix the canonical bug in the tool
-1. Write perfect off-target count code, integrate here.
+## Todo for the tool
+1. Add on-tgt activity scores
+1. Fix package error
+
+## Deliverables for meeting on Mar 3
+1. Add GC-content scores: ADDED
+1. Fix -v command: FIXED
+1. Complete testing: COMPLETED
+1. Run for multiple genomes:
+1. Find the code for Expt 1
+1. Prepare some Figures for Expt 1
