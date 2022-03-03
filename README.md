@@ -5,7 +5,7 @@ Codes of all experiments to prepare results are in this repository, along with c
 ## Log in info
 experiments are run in this machine:
 131.215.78.41
-shudhu ajker jonno
+ajker jonno
 
 ## Installation tips
 Had to do the following:
@@ -22,6 +22,6 @@ export PATH=/home/atif/krispmer/soft/bowtie2-2.4.5-linux-x86_64:$PATH
 1. Add GC-content scores: ADDED
 1. Fix -v command: FIXED
 1. Complete testing: COMPLETED
-1. Run for multiple genomes:
+1. Run for multiple genomes: 
 1. Find the code for Expt 1
 1. Prepare some Figures for Expt 1
