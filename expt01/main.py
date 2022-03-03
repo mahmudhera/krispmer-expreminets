@@ -154,4 +154,7 @@ if __name__ == "__main__":
 	krispmer_scores = get_krispmer_scores(scores_filename)
 
 	for grna in genome_scores.keys():
-		print(grna, genome_scores[grna], krispmer_scores[grna])
+		try:
+			print(grna, genome_scores[grna], krispmer_scores[grna])
+		except:
+			print(grna, genome_scores[grna], krispmer_scores[reverse_complement(grna)])
