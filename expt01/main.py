@@ -81,7 +81,7 @@ def generate_jf_file(fasta_filename, jf_filename="temp"):
 def get_list_of_grna_strings(scores_filename):
 	plus_ = pd.read_csv(scores_filename)['tgt_in_plus'].to_list()
 	minus_ = pd.read_csv(scores_filename)['tgt_in_minus'].to_list()
-	strand_ = pd.read_csv(scores_filename)['stand'].to_list()
+	strand_ = pd.read_csv(scores_filename)['strand'].to_list()
 	grnas = []
 	for (p, m, s) in list(zip(plus_, minus_, strand_)):
 		if s == '+':
