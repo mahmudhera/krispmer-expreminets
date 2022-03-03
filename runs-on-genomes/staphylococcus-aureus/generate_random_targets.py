@@ -5,7 +5,10 @@ fasta_filename = 'NC_010079.fasta'
 num_targets_each_chr = 15
 target_len_low = 2000
 target_len_high = 3000
+reads_filename = 'reads.fastq'
+hd = 3
 
+bash_file = open('script.sh', 'w')
 target_id = 1
 for seq_record in SeqIO.parse(fasta_filename, "fasta"):
 	num_bases = len(seq_record)
@@ -18,3 +21,6 @@ for seq_record in SeqIO.parse(fasta_filename, "fasta"):
 		target_id += 1
 		f.write (str(seq_record.seq[pos[0]:pos[1]]) + '\n')
 		f.close()
+		bash_file.write('krispmer ' + reads_filename + ' ' + 'target' + str(target_id) + '.fasta' + ' ' + 'scores' + str(target_id) + ' ' + str(hd) + '\n')
+		bash_file.write('echo Done for ' + str(target_id) + '\n')
+bash_file.close()
