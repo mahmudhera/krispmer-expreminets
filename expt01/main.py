@@ -83,7 +83,7 @@ def get_list_of_grna_strings(scores_filename):
 	minus_ = pd.read_csv(scores_filename)['tgt_in_minus'].to_list()
 	strand_ = pd.read_csv(scores_filename)['stand'].to_list()
 	grnas = []
-	for (p, m, s) in list(zip(plus_, minus_ strand_)):
+	for (p, m, s) in list(zip(plus_, minus_, strand_)):
 		if s == '+':
 			grnas.append(p)
 		else:
