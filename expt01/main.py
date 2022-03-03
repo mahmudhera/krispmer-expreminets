@@ -99,8 +99,8 @@ def generate_inverted_specificity_from_genome(guides, qf_genome, qf_target, max_
             merDNA = jellyfish.MerDNA(mer)
             revcompMerDNA = jellyfish.MerDNA(reverse_complement(mer))
             cutting_probability = get_score(candidate, mer)
-            val1 += max(qf[merDNA], qf[revcompMerDNA]) * cutting_probability
-            val2 += max(tgt_qf[merDNA], tgt_qf[revcompMerDNA]) * cutting_probability
+            val1 += max(qf_genome[merDNA], qf_genome[revcompMerDNA]) * cutting_probability
+            val2 += max(qf_target[merDNA], qf_target[revcompMerDNA]) * cutting_probability
             #print (mer + ' ' + str(cutting_probability))
         try:
             dic[candidate] = 1.0 * val1 / (val2 * target_count)
