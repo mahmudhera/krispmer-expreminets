@@ -22,6 +22,6 @@ export PATH=/home/atif/krispmer/soft/bowtie2-2.4.5-linux-x86_64:$PATH
 1. Add GC-content scores: ADDED
 1. Fix -v command: FIXED
 1. Complete testing: COMPLETED
-1. Run for multiple genomes: 
-1. Find the code for Expt 1
+1. Run for multiple genomes: RUN for
+    - Staphylococcus aureus
 1. Prepare some Figures for Expt 1

@@ -10,7 +10,7 @@ def get_off_target_count(target_jf_file, genome_jf_file, kmer_str):
 	cg2, ct2 = genome_jf_file[mer], target_jf_file[mer]
 	print (cg1+cg2, ct1+ct2)
 	return max(0, cg1 + cg2 - ct1 - ct2)
-	
+
 def generate_jf_file(fasta_filename, jf_filename="temp"):
 	# given a fasta file, use jellyfish to count 23-mers
 	# returns a QueryMerFile
@@ -18,24 +18,20 @@ def generate_jf_file(fasta_filename, jf_filename="temp"):
 	args = jf_command.split(' ')
 	subprocess.call(args)
 	return jellyfish.QueryMerFile(jf_filename)
-	
+
 def get_list_of_grna_strings(scores_filename):
 	return pd.read_csv(scores_filename)['tgt_in_plus'].to_list()
-	
+
 if __name__ == "__main__":
-	if len(sys.argv) < 4:
+	if len(sys.argv) < 10:
 		print("error")
-		print("usage: python main.py expt_num(int) genome_jf_filename folder_name")
+		print("usage: python main.py working_direcory genome_jf_filename target_filename scores_filename max_hd")
 		sys.exit(-1)
-		
-	print(sys.argv[1], sys.argv[2])
-	genome_jf_filename = sys.argv[2]
-	folder_name = sys.argv[3]
-	target_qf = generate_jf_file(folder_name + "/target" + sys.argv[1])
-	grnas = get_list_of_grna_strings(folder_name + "/scores" + sys.argv[1])
-	
-	genome_qf = jellyfish.QueryMerFile(genome_jf_filename)
-	
-	for grna in grnas:
-		x = get_off_target_count(target_qf, genome_qf, grna)
-		print (grna, x)
+
+	print(sys.argv)
+
+	folder_name = sys.argv[2]
+	genome_jf_filename = sys.argv[3]
+	target_filename = sys.argv[4]
+	scores_filename = sys.argv[5]
+	max_hd = int(sys.argv[6])
