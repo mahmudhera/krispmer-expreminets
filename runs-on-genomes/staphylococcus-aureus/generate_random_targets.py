@@ -18,9 +18,9 @@ for seq_record in SeqIO.parse(fasta_filename, "fasta"):
 		#print(str(seq_record.id)+":"+str(pos[0])+"-"+str(pos[1]))
 		f = open('target' + str(target_id) + '.fasta', 'w')
 		f.write ('> target' + str(target_id) + '\n')
-		target_id += 1
 		f.write (str(seq_record.seq[pos[0]:pos[1]]) + '\n')
 		f.close()
 		bash_file.write('krispmer ' + reads_filename + ' ' + 'target' + str(target_id) + '.fasta' + ' ' + 'scores' + str(target_id) + ' ' + str(hd) + '\n')
 		bash_file.write('echo Done for ' + str(target_id) + '\n')
+		target_id += 1
 bash_file.close()
