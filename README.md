@@ -24,4 +24,6 @@ export PATH=/home/atif/krispmer/soft/bowtie2-2.4.5-linux-x86_64:$PATH
 1. Complete testing: COMPLETED
 1. Run for multiple genomes: RUN for
     - Staphylococcus aureus
-1. Prepare some Figures for Expt 1
+    - Rhodobacter
+    - H Sapiens Chr 14
+1. Prepare some Figures for Expt 1: DONE for St.aureus
