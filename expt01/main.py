@@ -90,6 +90,14 @@ def get_list_of_grna_strings(scores_filename):
 			grnas.append(m)
 	return grnas
 
+# returns dictionary[grna]->our_score
+def get_krispmer_scores(scores_filename):
+	plus_ = pd.read_csv(scores_filename)['tgt_in_plus'].to_list()
+	scores_ = pd.read_csv(scores_filename)['inverse_specificity'].to_list()
+	d = {}
+	for (p,s) in list(zip(plus_, scores_)):
+		d[p] = s
+	return d
 
 def generate_inverted_specificity_from_genome(guides, qf_genome, qf_target, max_hd = 3, target_count = 1):
     """
@@ -143,4 +151,7 @@ if __name__ == "__main__":
 	grnas_in_positive = get_list_of_grna_strings(scores_filename)
 	genome_scores = generate_inverted_specificity_from_genome(grnas_in_positive, qf_genome,
 														qf_target, max_hd, target_count)
-	print(genome_scores)
+	krispmer_scores = get_krispmer_scores(scores_filename)
+
+	for grna in genome_scores.keys():
+		print(grna, genome_scores[grna], krispmer_scores[grna])
