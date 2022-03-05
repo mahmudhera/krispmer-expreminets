@@ -3,8 +3,8 @@ import random
 
 fasta_filename = 'NC_010079.fasta'
 num_targets_each_chr = 15
-target_len_low = 2000
-target_len_high = 3000
+target_len_low = 3000
+target_len_high = 4000
 reads_filename = 'reads.fastq'
 hd = 3
 
