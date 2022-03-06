@@ -8,7 +8,7 @@ from itertools import chain, combinations, product
 import sys
 from multiprocessing import Process, Manager
 
-num_threads = 48
+num_threads = 32
 num_cores = num_threads
 
 def test_parallel(arg_key, arg_val, dict):
@@ -125,8 +125,9 @@ def get_krispmer_scores(scores_filename):
 		d[p] = s
 	return d
 
-def generate_inverted_specificity_from_genome_parallel(guides, qf_genome, qf_target, max_hd, target_count, dict):
+def generate_inverted_specificity_from_genome_parallel(guides, qf_genome, qf_target, max_hd, target_count, dict, id):
     dict = {}
+    print("I am " + str(i) + ", with " + str(len(guides)) + " grnas")
     for candidate in guides:
         trie = generate_adjacent_mers(candidate, max_hd)
         val1 = 0.0
@@ -156,7 +157,7 @@ def generate_inverted_specificity_from_genome(guides, qf_genome, qf_target, max_
         high_index = min( int( (i+1)*guides_per_thread ) , len(guides) )
         guides_this_thread = guides[low_index:high_index]
         dict = manager.dict()
-        p = Process(target=generate_inverted_specificity_from_genome_parallel, args = (guides_this_thread, qf_genome, qf_target, max_hd, target_count, dict))
+        p = Process(target=generate_inverted_specificity_from_genome_parallel, args = (guides_this_thread, qf_genome, qf_target, max_hd, target_count, dict, i))
         process_list.append(p)
         dictionaries.append(dict)
         p.start()
