@@ -1,9 +1,9 @@
-#import dna_jellyfish as jellyfish
+import dna_jellyfish as jellyfish
 import subprocess
-#import pandas as pd
+import pandas as pd
 import sys
 from get_cfd_score import get_score
-#import trie
+import trie
 from itertools import chain, combinations, product
 import sys
 from multiprocessing import Process, Manager
