@@ -1,11 +1,35 @@
-import dna_jellyfish as jellyfish
+#import dna_jellyfish as jellyfish
 import subprocess
-import pandas as pd
+#import pandas as pd
 import sys
 from get_cfd_score import get_score
-import trie
+#import trie
 from itertools import chain, combinations, product
 import sys
+from multiprocessing import Process, Manager
+
+num_cores = 48
+
+def test_parallel(arg_key, arg_val, dict):
+    dict[arg_key] = arg_val
+
+def test():
+    manager = Manager()
+    processes = []
+    dictionaries = []
+    for i in range(num_cores):
+        dict = manager.dict()
+        key = i
+        val = "val is " + str(i)
+        dictionaries.append(dict)
+        p = Process( target=test_parallel, args=(key, val, dict) )
+        processes.append(p)
+        p.start()
+
+    for p in processes:
+        p.join()
+    for d in dictionaries:
+        print(d)
 
 def complement(seq):
     """
@@ -100,15 +124,8 @@ def get_krispmer_scores(scores_filename):
 		d[p] = s
 	return d
 
-def generate_inverted_specificity_from_genome(guides, qf_genome, qf_target, max_hd = 3, target_count = 1):
-    """
-    generates the inverted specificity score used in krispmer, but using the genome, not expectations
-    :param guides: list of guides, which are 2-tuple of grna(23-nts) and strand('+' or '-')
-    :param genome_jf_filename: jellyfish filename (generated for 23-mers)
-    :param target_region_filename: the target string as fasta
-    :return: dictionary containing the scores. dic[gRNA sequence] -> the inv_spec score
-    """
-    dic = {}
+def generate_inverted_specificity_from_genome_parallel(guides, qf_genome, qf_target, max_hd, target_count, dict):
+    dict = {}
     for candidate in guides:
         trie = generate_adjacent_mers(candidate, max_hd)
         val1 = 0.0
@@ -122,17 +139,40 @@ def generate_inverted_specificity_from_genome(guides, qf_genome, qf_target, max_
             val2 += (qf_target[merDNA] + qf_target[revcompMerDNA]) * cutting_probability
             #print (mer + ' ' + str(cutting_probability))
         try:
-            dic[candidate] = 1.0 * val1 / (val2 * target_count)
+            dict[candidate] = 1.0 * val1 / (val2 * target_count)
         except:
-            dic[candidate] = -1
+            dict[candidate] = -1
             print(cutting_probability, get_score(reverse_complement(candidate), reverse_complement(mer)))
-    return dic
+
+def generate_inverted_specificity_from_genome(guides, qf_genome, qf_target, max_hd = 3, target_count = 1):
+    process_list = []
+    dictionaries = []
+    guides_per_thread = len(guides) / num_threads
+    handled_so_far = 0
+    manager = Manager()
+    for i in range(num_cores):
+        low_index = handled_so_far
+        high_index = min( int( (i+1)*guides_per_thread ) , len(candidates) )
+        guides_this_thread = guides[low_index:high_index]
+        dict = manager.dict()
+        p = Process(target=generate_inverted_specificity_from_genome_parallel, args = (guides, qf_genome, qf_target, max_hd, target_count, dict))
+        proces_list.append(p)
+        dictionaries.append(dict)
+        p.start()
+
+    for p in process_list:
+        p.join()
+
+    dict = {}
+    for d in dictionaries:
+        dict.update(d)
+    return dict
 
 
 if __name__ == "__main__":
 	if len(sys.argv) < 6:
 		print("error")
-		print("usage: python main.py genome_jf_filename target_filename scores_filename max_hd out_filename")
+		print("usage: python main.py genome_jf_filename target_filename scores_filename max_hd out_filename <tgt_count, optional>")
 		sys.exit(-1)
 
 	genome_jf_filename = sys.argv[1]
@@ -148,7 +188,6 @@ if __name__ == "__main__":
 
 	qf_target = generate_jf_file(target_filename)
 	qf_genome = jellyfish.QueryMerFile(genome_jf_filename)
-
 	grnas_in_positive = get_list_of_grna_strings(scores_filename)
 	genome_scores = generate_inverted_specificity_from_genome(grnas_in_positive, qf_genome,
 														qf_target, max_hd, target_count)
