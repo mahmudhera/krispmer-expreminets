@@ -157,7 +157,7 @@ def generate_inverted_specificity_from_genome(guides, qf_genome, qf_target, max_
         guides_this_thread = guides[low_index:high_index]
         dict = manager.dict()
         p = Process(target=generate_inverted_specificity_from_genome_parallel, args = (guides, qf_genome, qf_target, max_hd, target_count, dict))
-        proces_list.append(p)
+        process_list.append(p)
         dictionaries.append(dict)
         p.start()
 
