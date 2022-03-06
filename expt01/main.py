@@ -127,7 +127,7 @@ def get_krispmer_scores(scores_filename):
 
 def generate_inverted_specificity_from_genome_parallel(guides, qf_genome, qf_target, max_hd, target_count, dict, id):
     dict = {}
-    print("I am " + str(i) + ", with " + str(len(guides)) + " grnas")
+    print("I am " + str(id) + ", with " + str(len(guides)) + " grnas")
     for candidate in guides:
         trie = generate_adjacent_mers(candidate, max_hd)
         val1 = 0.0
