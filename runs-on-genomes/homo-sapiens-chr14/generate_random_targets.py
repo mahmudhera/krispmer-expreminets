@@ -2,7 +2,7 @@ from Bio import SeqIO
 import random
 
 fasta_filename = 'genome.fasta'
-num_targets_each_chr = 15
+num_targets_each_chr = 200
 target_len_low = 3000
 target_len_high = 4000
 reads_filename = 'reads.fastq'
