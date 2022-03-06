@@ -7,6 +7,8 @@ target_len_low = 3000
 target_len_high = 4000
 reads_filename = 'reads.fastq'
 hd = 3
+jf_reads_filename = 'krispmer_temp/jf_binary_file.jf'
+histo_filename = 'krispmer_temp/k_spectrum_histo_data'
 
 bash_file = open('script.sh', 'w')
 target_id = 1
@@ -20,7 +22,8 @@ for seq_record in SeqIO.parse(fasta_filename, "fasta"):
 		f.write ('> target' + str(target_id) + '\n')
 		f.write (str(seq_record.seq[pos[0]:pos[1]]) + '\n')
 		f.close()
-		bash_file.write('krispmer ' + reads_filename + ' ' + 'target' + str(target_id) + '.fasta' + ' ' + 'scores' + str(target_id) + ' ' + str(hd) + ' -n\n')
+		options = ' -J ./' + jf_reads_filename + ' -H ./' + histo_filename
+		bash_file.write('krispmer ' + reads_filename + ' ' + 'target' + str(target_id) + '.fasta' + ' ' + 'scores' + str(target_id) + ' ' + str(hd) + ' -n ' + options + '\n')
 		bash_file.write('echo Done for ' + str(target_id) + '\n')
 		target_id += 1
 bash_file.close()
