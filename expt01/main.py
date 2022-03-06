@@ -168,7 +168,9 @@ def generate_inverted_specificity_from_genome(guides, qf_genome, qf_target, max_
 
     dict = {}
     for d in dictionaries:
+        print(d)
         dict.update(d)
+    print(dict)
     return dict
 
 
