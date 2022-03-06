@@ -12,3 +12,7 @@ Time needed
 Staphylococcus aureus
 305 s
 20.33 s per target region
+
+Rhodobacter
+142m56.034s
+81.68 seconds per target region
