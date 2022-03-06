@@ -153,7 +153,7 @@ def generate_inverted_specificity_from_genome(guides, qf_genome, qf_target, max_
     manager = Manager()
     for i in range(num_cores):
         low_index = handled_so_far
-        high_index = min( int( (i+1)*guides_per_thread ) , len(candidates) )
+        high_index = min( int( (i+1)*guides_per_thread ) , len(guides) )
         guides_this_thread = guides[low_index:high_index]
         dict = manager.dict()
         p = Process(target=generate_inverted_specificity_from_genome_parallel, args = (guides, qf_genome, qf_target, max_hd, target_count, dict))
