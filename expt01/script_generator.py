@@ -1,7 +1,9 @@
 start = 1
-end = 105
-genome_name = 'staphylococcus-aureus'
-genome_name = 'rhodobacter-sphaeroides'
+end = 200
+
+#genome_name = 'staphylococcus-aureus'
+#genome_name = 'rhodobacter-sphaeroides'
+genome_name = 'homo-sapiens-chr14'
 
 f = open('script.sh', 'w')
 for i in range(start, end+1):
