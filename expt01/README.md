@@ -1,5 +1,10 @@
 This is the first experiment.
 
+Next meeting:
+1. find the bug, fix it
+1. count CHM13 kmers in reference
+1. dig: which version of hg38 do they report using??
+
 # Score with and without using ref. genome
 
 The steps are as follows:
