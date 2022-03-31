@@ -22,10 +22,6 @@ if __name__ == "__main__":
     scores_krispmer = pd.read_csv(filename, header=None, delimiter=' ')[2].to_list()
     scores_using_genome = pd.read_csv(filename, header=None, delimiter=' ')[1].to_list()
 
-    print(pearsonr(scores_krispmer, scores_using_genome))
-    plt.scatter(scores_krispmer, scores_using_genome)
-    plt.savefig('test.pdf')
-
     off_targets = [score-1 for score in scores_using_genome]
 
     scores_ot = list(zip(scores_krispmer, off_targets))
@@ -36,7 +32,7 @@ if __name__ == "__main__":
     for (score, off_target) in scores_ot:
         cumulative_off_target += off_target
         cdf.append( (score, cumulative_off_target) )
-        if score > 5:
+        if score > 2.0:
             break
 
     xs = [tuple[0] for tuple in cdf]
@@ -44,7 +40,6 @@ if __name__ == "__main__":
     ys = savgol_filter(ys, 3, 2)
 
     plt.plot( xs, ys )
-
 
     plt.title('Genome: ' + genome_name + ', target: ' + target_name)
     plt.savefig(filename + '.pdf')
