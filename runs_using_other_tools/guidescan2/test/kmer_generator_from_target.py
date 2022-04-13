@@ -25,12 +25,6 @@ def parse_arguments():
     )
 
     parser.add_argument(
-        "--min-chr-length",
-        help="Minimum chromosome length to consider for kmer generation.",
-        default=10_000
-    )
-
-    parser.add_argument(
         "--prefix",
         help="Prefix to use for kmer identifiers.",
         default=""
@@ -58,7 +52,7 @@ def generate_pam_set(pam):
 
         if "N" not in pam:
             pam_stack.append(pam)
-            continue 
+            continue
 
         for nuc in NUCS:
             pam_stack.append(pam.replace("N", nuc, 1))
@@ -72,7 +66,7 @@ def find_kmers(pam, k, chrm, forward=True, end=True):
         index = chrm.find(pam, index)
 
         if index == -1:
-            break 
+            break
 
         if end:
             if forward:
@@ -125,8 +119,5 @@ if __name__ == "__main__":
     print("id,sequence,pam,chromosome,position,sense")
     print(args.min_chr_length)
     for record in SeqIO.parse(args.fasta, "fasta"):
-        if len(record) < args.min_chr_length:
-            continue
-
         for kmer in find_all_kmers(args.pam, args.kmer_length, record.seq, end=not args.start):
             output_kmer(args.prefix, record.name, kmer)
