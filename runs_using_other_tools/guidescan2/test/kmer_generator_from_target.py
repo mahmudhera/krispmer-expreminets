@@ -117,7 +117,6 @@ if __name__ == "__main__":
     args = parse_arguments()
 
     print("id,sequence,pam,chromosome,position,sense")
-    print(args.min_chr_length)
     for record in SeqIO.parse(args.fasta, "fasta"):
         for kmer in find_all_kmers(args.pam, args.kmer_length, record.seq, end=not args.start):
             output_kmer(args.prefix, record.name, kmer)
