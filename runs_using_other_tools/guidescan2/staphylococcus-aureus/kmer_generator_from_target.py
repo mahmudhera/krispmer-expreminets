@@ -61,7 +61,6 @@ def generate_pam_set(pam):
 
 def find_kmers(pam, k, chrm, forward=True, end=True):
     index = 0
-    print(chrm)
     while True:
         index = chrm.find(pam, index)
 
@@ -100,7 +99,7 @@ def find_all_kmers(pam, k, chrm, end=True):
     for p in pam_set:
         for kmer, pos in find_kmers(p, k, chrm, end=end):
             yield {"sequence" : kmer, "position" : pos, "pam" : pam, "sense": "+"}
-
+    print('Recahed here')
     for p in rev_pam_set:
         for kmer, pos in find_kmers(p, k, chrm, forward=False, end=end):
             yield {"sequence" : revcom(kmer), "position" : pos,
