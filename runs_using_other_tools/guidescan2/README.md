@@ -9,3 +9,6 @@ Steps to run:
 1. Edit the file with number of targets and genome index name
 1. `python all_target_handler.py > handle_all_targets.sh`
 1. Finally, `bash handle_all_targets.sh`
+
+
+Currently, the kmer generator does not work. Need to fix that.
