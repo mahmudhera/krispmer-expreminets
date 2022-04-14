@@ -62,7 +62,7 @@ def generate_pam_set(pam):
 def find_kmers(pam, k, chrm, forward=True, end=True):
     index = 0
     while True:
-        print(chrm, pam, index)
+        print(chrm, pam, index, forward, end)
         index = chrm.find(pam, index)
         if index == -1:
             print('This!')
