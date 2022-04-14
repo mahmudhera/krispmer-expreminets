@@ -61,13 +61,14 @@ def generate_pam_set(pam):
 
 def find_kmers(pam, k, chrm, forward=True, end=True):
     index = 0
-
     while True:
+        #print(chrm, pam, index, forward, end)
         index = chrm.find(pam, index)
-
         if index == -1:
+            #print('This!')
             break
-
+        #print('Reached this!')
+        #print(index)
         if end:
             if forward:
                 kmer = chrm[index - k:index]
@@ -82,8 +83,9 @@ def find_kmers(pam, k, chrm, forward=True, end=True):
             else:
                 kmer = chrm[index - k:index]
                 position = index - k
-
+        #print(position)
         if position < 0:
+            index += 1
             continue
 
         index += 1
@@ -96,11 +98,11 @@ def find_kmers(pam, k, chrm, forward=True, end=True):
 def find_all_kmers(pam, k, chrm, end=True):
     pam_set = generate_pam_set(pam)
     rev_pam_set = list(map(revcom, pam_set))
-
+    
     for p in pam_set:
         for kmer, pos in find_kmers(p, k, chrm, end=end):
             yield {"sequence" : kmer, "position" : pos, "pam" : pam, "sense": "+"}
-
+    print('Recahed here')
     for p in rev_pam_set:
         for kmer, pos in find_kmers(p, k, chrm, forward=False, end=end):
             yield {"sequence" : revcom(kmer), "position" : pos,
