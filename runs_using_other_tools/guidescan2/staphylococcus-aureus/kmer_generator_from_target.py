@@ -65,6 +65,7 @@ def find_kmers(pam, k, chrm, forward=True, end=True):
         print(chrm, pam, index)
         index = chrm.find(pam, index)
         if index == -1:
+            print('This!')
             break
 
         if end:
