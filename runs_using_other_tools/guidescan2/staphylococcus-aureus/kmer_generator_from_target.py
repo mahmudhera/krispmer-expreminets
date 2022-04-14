@@ -68,6 +68,7 @@ def find_kmers(pam, k, chrm, forward=True, end=True):
             print('This!')
             break
         print('Reached this!')
+        print(index)
         if end:
             if forward:
                 kmer = chrm[index - k:index]
