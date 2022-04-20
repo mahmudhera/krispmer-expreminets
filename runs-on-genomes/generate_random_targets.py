@@ -2,10 +2,10 @@ from Bio import SeqIO
 import random
 
 random.seed(12345)
-fasta_filename = TODO
-num_targets_each_chr = TODO
+fasta_filename = 'genome.fasta'
+num_targets_each_chr = 5
 target_len_low = 2000
-target_len_high = 2499
+target_len_high = 2299
 reads_filename = 'reads.fastq'
 hd = 3
 
