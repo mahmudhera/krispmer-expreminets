@@ -5,7 +5,7 @@ random.seed(12345)
 fasta_filename = TODO
 num_targets_each_chr = TODO
 target_len_low = 2000
-target_len_high = 2500
+target_len_high = 2499
 reads_filename = 'reads.fastq'
 hd = 3
 
@@ -22,7 +22,7 @@ for seq_record in SeqIO.parse(fasta_filename, "fasta"):
 		f.write ('> target' + str(target_id) + '_' + str(pos[0]) + ':' + str(pos[1]) + '\n')
 		f.write (str(seq_record.seq[pos[0]:pos[1]]) + '\n')
 		f.close()
-		bash_file.write('krispmer ' + reads_filename + ' ' + 'target' + str(target_id) + '.fasta' + ' ' + 'scores' + str(target_id) + ' ' + str(hd) + ' -n\n')
+		bash_file.write('krispmer ' + reads_filename + ' ' + 'target_' + seq_long_id + "_" + str(target_id) + '.fasta' + ' ' + 'scores' + str(target_id) + ' ' + str(hd) + ' -n\n')
 		bash_file.write('echo Done for ' + str(target_id) + '\n')
 		target_id += 1
 bash_file.close()
