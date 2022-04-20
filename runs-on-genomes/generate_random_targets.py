@@ -1,6 +1,7 @@
 from Bio import SeqIO
 import random
 
+random.seed(12345)
 fasta_filename = TODO
 num_targets_each_chr = TODO
 target_len_low = 2000
