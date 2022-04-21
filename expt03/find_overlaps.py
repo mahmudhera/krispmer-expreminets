@@ -63,17 +63,21 @@ def get_off_target_count(target_jf_file, genome_jf_file, kmer_str):
 	print (cg1+cg2, ct1+ct2)
 	return max(0, cg1 + cg2 - ct1 - ct2)
 
-def get_off_target_counts_krispmer(grnas_in_positive):
+def get_off_target_counts_krispmer(grnas_in_positive, genome_jf_fname, target_jf_fname):
+    tgt_jf_file = jellyfish.QueryMerFile(target_jf_fname)
+    gnm_jf_file = jellyfish.QueryMerFile(genome_jf_fname)
     grnas = grnas_in_positive
     off_tgt_counts = []
     for grna in grnas:
-        off_tgt_counts.append( get_off_target_count(grna[:-3]) )
+        off_tgt_counts.append( get_off_target_count(tgt_jf_file, gnm_jf_file, grna[:-3]) )
     return off_tgt_counts
 
-def get_off_target_counts_guidescan(grnas):
+def get_off_target_counts_guidescan(grnas, genome_jf_fname, target_jf_fname):
+    tgt_jf_file = jellyfish.QueryMerFile(target_jf_fname)
+    gnm_jf_file = jellyfish.QueryMerFile(genome_jf_fname)
     off_tgt_counts = []
     for grna in grnas:
-        off_tgt_counts.append( get_off_target_count(grna) )
+        off_tgt_counts.append( get_off_target_count(tgt_jf_file, gnm_jf_file, grna) )
     return off_tgt_counts
 
 if __name__=="__main__":
@@ -95,5 +99,5 @@ if __name__=="__main__":
     print(str(len(grnas_in_neg) - common) + '\t\t\t' + str(common) + '\t' + str(len(gs_grnas) - common))
     print('')
 
-    print( get_off_target_counts_krispmer(grnas_in_pos) )
-    print( get_off_target_counts_guidescan(gs_grnas) )
+    print( get_off_target_counts_krispmer(grnas_in_pos, genome_jf_fname, target_jf_fname) )
+    print( get_off_target_counts_guidescan(gs_grnas, genome_jf_fname, target_jf_fname) )
