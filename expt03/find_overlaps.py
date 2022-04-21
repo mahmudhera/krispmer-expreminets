@@ -50,7 +50,7 @@ def find_common(gs_grnas, kr_grnas_in_pos, kr_grnas_in_neg):
     return count
 
 def generate_jf_file(fasta_filename, jf_filename="temp"):
-	jf_command = "jellyfish count -m 23 -s 100M -o " + jf_filename + " -t 8 -C " + fasta_filename
+	jf_command = "jellyfish count -m 20 -s 100M -o " + jf_filename + " -t 8 -C " + fasta_filename
 	args = jf_command.split(' ')
 	subprocess.call(args)
 	return jellyfish.QueryMerFile(jf_filename)
