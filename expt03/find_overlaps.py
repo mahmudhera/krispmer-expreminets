@@ -60,7 +60,7 @@ def get_off_target_count(target_jf_file, genome_jf_file, kmer_str):
 	cg1, ct1 = genome_jf_file[mer], target_jf_file[mer]
 	mer = jellyfish.MerDNA( reverse_complement(kmer_str) )
 	cg2, ct2 = genome_jf_file[mer], target_jf_file[mer]
-	print (cg1+cg2, ct1+ct2)
+	#print (cg1+cg2, ct1+ct2)
 	return max(0, cg1 + cg2 - ct1 - ct2)
 
 def get_off_target_counts_krispmer(grnas_in_positive, genome_jf_fname, target_jf_fname):
@@ -99,5 +99,12 @@ if __name__=="__main__":
     print(str(len(grnas_in_neg) - common) + '\t\t\t' + str(common) + '\t' + str(len(gs_grnas) - common))
     print('')
 
-    print( get_off_target_counts_krispmer(grnas_in_pos, genome_jf_fname, target_jf_fname) )
-    print( get_off_target_counts_guidescan(gs_grnas, genome_jf_fname, target_jf_fname) )
+    print("Total off-target counts for krispmer grnas:")
+    l = get_off_target_counts_krispmer(grnas_in_pos, genome_jf_fname, target_jf_fname)
+    print(l)
+    print("A total of " + str(sum(l)))
+
+    print("Total off-target counts for guidescan grnas:")
+    l = get_off_target_counts_guidescan(gs_grnas, genome_jf_fname, target_jf_fname)
+    print(l)
+    print("A total of " + str(sum(l)))
