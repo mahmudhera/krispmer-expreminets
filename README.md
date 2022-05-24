@@ -30,7 +30,32 @@ export PATH=/home/atif/krispmer/soft/bowtie2-2.4.5-linux-x86_64:$PATH
 
 
 
+<!---
 study -- which regions or which genomes
 other tools
 non-ref two tools. other such?
 doench -- disagreement
+
+
+
+-- Fig 2
+-- drop simpler genomes
+-- Panels in Fig 2
+    (a) Run for larger genomes. show correlation with/without ref
+    (b) (c) -- like GuideScan
+
+    Mouse Human Yeast
+
+
+repeat annotation na pele
+repeat masking tools paoa jay
+ogula diye kaj korbo
+
+make sure reproducible
+
+
+
+for one organism
+
+prepare everything in Fig 2
+---!>
