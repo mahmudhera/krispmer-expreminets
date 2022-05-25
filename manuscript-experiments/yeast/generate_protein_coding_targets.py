@@ -9,6 +9,25 @@ random_seed = 1
 fasta_filename = 'genome.fasta'
 hd = 3
 
+dic = {}
+dic['chrI'] = 'NC_001133.9'
+dic['chrII'] = 'NC_001134.8'
+dic['chrIII'] = 'NC_001135.5'
+dic['chrIV'] = 'NC_001136.10'
+dic['chrV'] = 'NC_001137.3'
+dic['chrVI'] = 'NC_001138.5'
+dic['chrVII'] = 'NC_001139.9'
+dic['chrVIII'] = 'NC_001140.6'
+dic['chrIX'] = 'NC_001141.2'
+dic['chrX'] = 'NC_001142.9'
+dic['chrXI'] = 'NC_001143.9'
+dic['chrXII'] = 'NC_001144.5'
+dic['chrXIII'] = 'NC_001145.3'
+dic['chrXIV'] = 'NC_001146.8'
+dic['chrXV'] = 'NC_001147.6'
+dic['chrXVI'] = 'NC_001148.4'
+dic['chrmt'] = 'NC_001224.1'
+
 if __name__ == "__main__":
     random.seed(random_seed)
 
