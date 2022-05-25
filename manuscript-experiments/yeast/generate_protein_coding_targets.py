@@ -83,7 +83,6 @@ if __name__ == "__main__":
     random.shuffle(list_positions)
     count = 0
     for chr_name, start, end in list_positions:
-        count += 1
         if end < 150 or end-150 <= start:
             continue
         target_start = random.randint(start, end-150)
