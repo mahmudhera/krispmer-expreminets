@@ -67,5 +67,6 @@ if __name__ == "__main__":
     for chr_name, start, end in list_positions[:num_targets]:
         if end < 150:
             continue
+        print(start, end)
         target_start = random.randint(start, end-150)
         print(chr_name, target_start, target_start+150)
