@@ -65,7 +65,7 @@ if __name__ == "__main__":
                 target_id = target_id + 1
                 bash_file.write('krispmer ' + reads_filename + ' ' + fname + ' ' + 'scores_' + fname + ' ' + str(hd) + ' -n\n')
         count += 1
-        if count == num_targets:
+        if count >= num_targets:
             break
 
 
@@ -96,7 +96,7 @@ if __name__ == "__main__":
                 target_id = target_id + 1
                 bash_file.write('krispmer ' + reads_filename + ' ' + fname + ' ' + 'scores_' + fname + ' ' + str(hd) + ' -n\n')
         count += 1
-        if count == num_targets:
+        if count >= num_targets:
             break
 
     bash_file.close()
