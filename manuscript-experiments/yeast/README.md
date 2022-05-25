@@ -9,3 +9,7 @@ Things we will do here:
 1. Make guidescan2 run on the same targets.
 1. Make run using some other tool.
 1. Compare for perfect off targets.
+
+
+Reads downloaded from: PRJNA708301
+Only genome paired data were obtained
