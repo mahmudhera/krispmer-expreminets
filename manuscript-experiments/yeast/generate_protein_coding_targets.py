@@ -1,13 +1,19 @@
 import numpy as np
 import pandas as pd
 import random
+from Bio import SeqIO
 
 num_targets = 50
 target_length = 150
 random_seed = 1
+fasta_filename = 'genome.fasta'
+hd = 3
 
 if __name__ == "__main__":
     random.seed(random_seed)
+
+    for seq_record in SeqIO.parse(fasta_filename, "fasta"):
+        print(seq_record.id)
 
     # non protein coding genes
     df = pd.read_csv('AGR_Yeast_Genes.tsv', delimiter='\t', header=None)
