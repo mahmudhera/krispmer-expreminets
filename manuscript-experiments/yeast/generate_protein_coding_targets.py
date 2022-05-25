@@ -58,7 +58,7 @@ if __name__ == "__main__":
             if seq_record.id == dic[chr_name]:
                 fname = 'target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150) + '.fasta'
                 f = open(fname, 'w')
-                f.write('> ' + target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150)\n')
+                f.write('> ' + 'target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150)\n')
                 f.write(seq_record.seq[target_start:target_start+150])
                 f.close()
                 target_id = target_id + 1
@@ -85,7 +85,7 @@ if __name__ == "__main__":
             if seq_record.id == dic[chr_name]:
                 fname = 'target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150) + '.fasta'
                 f = open(fname, 'w')
-                f.write('> ' + target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150)\n')
+                f.write('> ' + 'target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150)\n')
                 f.write(seq_record.seq[target_start:target_start+150])
                 f.close()
                 target_id = target_id + 1
