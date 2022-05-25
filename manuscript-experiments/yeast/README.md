@@ -1,6 +1,6 @@
 Things we will do here:
 
-1. Generate protein coding gene list, make sure have access to chromosome coordinates
+1. Generate protein coding gene list, make sure have access to chromosome coordinates.
 1. Generate targets randomly from these
 1. Generate non-coding targets
 1. Generate duplicated region targets
