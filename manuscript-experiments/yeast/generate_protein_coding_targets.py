@@ -48,7 +48,9 @@ if __name__ == "__main__":
     random.shuffle(list_positions)
     for chr_name, start, end in list_positions[:num_targets]:
         target_start = random.randint(start, end-150)
-        print(chr_name, target_start, target_start+150)
+        for seq_record in SeqIO.parse(fasta_filename, "fasta"):
+            if seq_record.id == dic[chr_name]:
+                print(chr_name, seq_record.id, target_start, target_start+150)
 
 
 
@@ -65,6 +67,7 @@ if __name__ == "__main__":
     list_positions = list(zip(chr_names, start_pos, end_pos))
     random.shuffle(list_positions)
     for chr_name, start, end in list_positions[:num_targets]:
+        break
         if end < 150 or end-150 <= start:
             continue
         target_start = random.randint(start, end-150)
