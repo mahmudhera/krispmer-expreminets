@@ -50,7 +50,8 @@ if __name__ == "__main__":
     list_positions = list(zip(chr_names, start_pos, end_pos))
     random.shuffle(list_positions)
     target_id = 1
-    for chr_name, start, end in list_positions[:num_targets]:
+    count = 0
+    for chr_name, start, end in list_positions:
         if end < 150 or end-150 <= start:
             continue
         target_start = random.randint(start, end-150)
@@ -63,6 +64,9 @@ if __name__ == "__main__":
                 f.close()
                 target_id = target_id + 1
                 bash_file.write('krispmer ' + reads_filename + ' ' + fname + ' ' + 'scores_' + fname + ' ' + str(hd) + ' -n\n')
+        count += 1
+        if count == num_targets:
+            break
 
 
     # protein coding genes
@@ -77,7 +81,9 @@ if __name__ == "__main__":
 
     list_positions = list(zip(chr_names, start_pos, end_pos))
     random.shuffle(list_positions)
-    for chr_name, start, end in list_positions[:num_targets]:
+    count = 0
+    for chr_name, start, end in list_positions:
+        count += 1
         if end < 150 or end-150 <= start:
             continue
         target_start = random.randint(start, end-150)
@@ -90,5 +96,8 @@ if __name__ == "__main__":
                 f.close()
                 target_id = target_id + 1
                 bash_file.write('krispmer ' + reads_filename + ' ' + fname + ' ' + 'scores_' + fname + ' ' + str(hd) + ' -n\n')
+        count += 1
+        if count == num_targets:
+            break
 
     bash_file.close()
