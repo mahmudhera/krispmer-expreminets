@@ -8,6 +8,7 @@ target_length = 150
 random_seed = 1
 fasta_filename = 'genome.fasta'
 hd = 3
+reads_filename = 'reads.fastq'
 
 dic = {}
 dic['chrI'] = 'NC_001133.9'
@@ -31,6 +32,8 @@ dic['chrmt'] = 'NC_001224.1'
 if __name__ == "__main__":
     random.seed(random_seed)
 
+    bash_file = open('script.sh', 'w')
+
     for seq_record in SeqIO.parse(fasta_filename, "fasta"):
         print(seq_record.id)
 
@@ -46,12 +49,20 @@ if __name__ == "__main__":
 
     list_positions = list(zip(chr_names, start_pos, end_pos))
     random.shuffle(list_positions)
+    target_id = 1
     for chr_name, start, end in list_positions[:num_targets]:
+        if end < 150 or end-150 <= start:
+            continue
         target_start = random.randint(start, end-150)
         for seq_record in SeqIO.parse(fasta_filename, "fasta"):
             if seq_record.id == dic[chr_name]:
-                print(chr_name, seq_record.id, target_start, target_start+150)
-
+                fname = 'target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150) + '.fasta'
+                f = open(fname, 'w')
+                f.write('> 'target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150)\n')
+                f.write(seq_record.seq[target_start:target_start+150])
+                f.close()
+                target_id = target_id + 1
+                bash_file.write('krispmer ' + reads_filename + ' ' + fname + ' ' + 'scores_' + fname + ' ' + str(hd) + ' -n\n')
 
 
     # protein coding genes
@@ -67,8 +78,17 @@ if __name__ == "__main__":
     list_positions = list(zip(chr_names, start_pos, end_pos))
     random.shuffle(list_positions)
     for chr_name, start, end in list_positions[:num_targets]:
-        break
         if end < 150 or end-150 <= start:
             continue
         target_start = random.randint(start, end-150)
-        print(chr_name, target_start, target_start+150)
+        for seq_record in SeqIO.parse(fasta_filename, "fasta"):
+            if seq_record.id == dic[chr_name]:
+                fname = 'target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150) + '.fasta'
+                f = open(fname, 'w')
+                f.write('> 'target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150)\n')
+                f.write(seq_record.seq[target_start:target_start+150])
+                f.close()
+                target_id = target_id + 1
+                bash_file.write('krispmer ' + reads_filename + ' ' + fname + ' ' + 'scores_' + fname + ' ' + str(hd) + ' -n\n')
+
+    bash_file.close()
