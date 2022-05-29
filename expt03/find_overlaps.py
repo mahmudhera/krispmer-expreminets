@@ -28,7 +28,7 @@ def get_guides_from_kr_file(fname):
 def get_guides_from_gs_file(fname):
     df = pd.read_excel(fname)
     col_name = 'Number of off-targets'
-    df = df[ df[col_name] == 0 ]
+    df = df[ df[col_name] < 10 ]
     return df['Target-Seq'].tolist()
 
 def find_common(gs_grnas, kr_grnas_in_pos, kr_grnas_in_neg):
