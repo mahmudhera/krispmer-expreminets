@@ -36,6 +36,6 @@ if __name__ == "__main__":
         # then use tail and cut to list only grnas
         out_filename = join(mypath, 'gs_out_' + target_file.split('/')[-1])
         f = open(out_filename, 'w')
-        cmd = './script.sh'
+        cmd = 'sh ./script.sh'
         subprocess.call(cmd, stdout=f)
         f.close()
