@@ -29,13 +29,7 @@ if __name__ == "__main__":
         f.close()
 
         # then call guidescan enumerate
-        cmd = 'guidescan enumerate -m 3 -f tmp_kmer_file ' + index_name + ' --output tmp_enumerate_output'
+        out_filename = join(mypath, 'gs_out_' + target_file.split('/')[-1])
+        cmd = 'guidescan enumerate -m 3 -f tmp_kmer_file ' + index_name + ' --output ' + out_filename
         args = cmd.split(' ')
         subprocess.call(args)
-
-        # then use tail and cut to list only grnas
-        out_filename = join(mypath, 'gs_out_' + target_file.split('/')[-1])
-        f = open(out_filename, 'w')
-        cmd = 'sh ./script.sh'
-        subprocess.call(cmd.split(' '), stdout=f)
-        f.close()
