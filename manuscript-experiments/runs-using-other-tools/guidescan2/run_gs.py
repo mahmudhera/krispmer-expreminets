@@ -2,6 +2,7 @@ import argparse
 import os
 from os import listdir
 from os.path import isfile, join
+import subprocess
 
 def parse_args():
     parser = argparse.ArgumentParser(description="This script will run guidescan on the targets in input directory.\nThe genome needs to be in this directory.\nThe index computed by guidescan neeeds to in this directory\nThe resulting gRNAs will be in results directory.",
@@ -18,9 +19,23 @@ if __name__ == "__main__":
     # get all targets as list
     mypath = input_dir
     targets = [join(mypath, f) for f in listdir(mypath) if isfile(join(mypath, f))]
-    print(targets)
 
-    # for everything in that list
+    for target_file in targets:
         # first creake kmers file
+        f = open('tmp_kmer_file', 'w')
+        cmd = 'python generate_kmers.py --kmer-length 20 ' + target_file + ' --min-chr-length 1'
+        args = cmd.split(' ')
+        subprocess.call(args, stdout=f)
+        f.close()
+
         # then call guidescan enumerate
+        cmd = 'guidescan enumerate -m 3 -f tmp_kmer_file ' + index_name + ' --output tmp_enumerate_output'
+        args = cmd.split(' ')
+        subprocess.call(args)
+
         # then use tail and cut to list only grnas
+        out_filename = join(mypath, 'gs_out_' + target_file.split('/')[-1])
+        f = open(out_filename, 'w')
+        cmd = 'bash script.sh'
+        subprocess.call(cmd, stdout=f)
+        f.close()
