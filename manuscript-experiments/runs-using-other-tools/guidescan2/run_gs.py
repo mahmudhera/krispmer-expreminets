@@ -37,5 +37,5 @@ if __name__ == "__main__":
         out_filename = join(mypath, 'gs_out_' + target_file.split('/')[-1])
         f = open(out_filename, 'w')
         cmd = 'sh ./script.sh'
-        subprocess.call(cmd, stdout=f)
+        subprocess.call(cmd.split(' '), stdout=f)
         f.close()
