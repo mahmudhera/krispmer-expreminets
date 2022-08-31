@@ -17,6 +17,14 @@ if __name__ == "__main__":
     start_pos = df[3].tolist()
     list_positions = list( zip(contig_names, start_pos) )
 
+    # test start
+    contig_name_test = contig_names[0]
+    start_pos_test = start_pos[0]
+    for seq_record in SeqIO.parse(fasta_filename, "fasta"):
+        if seq_record.id == contig_name:
+            print( str( seq_record.seq[start_pos_test-10:start_pos_test+30] ) )
+    # test end
+
     random.shuffle(list_positions)
     num_targets_generated = 0
 
@@ -36,5 +44,9 @@ if __name__ == "__main__":
                 f.write(str(seq_record.seq[start_pos-75:start_pos+75]))
                 f.close()
                 bash_file.write('krispmer ' + reads_filename + ' ' + fname + ' ' + 'scores_' + fname + ' ' + str(hd) + ' -n -J mer_counts.jf -H k_spectrum_histo -n\n')
+
+        num_targets_generated+=1
+        if num_targets_generated == num_targets:
+            break
 
     bash_file.close()
