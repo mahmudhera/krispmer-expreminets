@@ -21,7 +21,7 @@ if __name__ == "__main__":
     contig_name_test = contig_names[0]
     start_pos_test = start_pos[0]
     for seq_record in SeqIO.parse(fasta_filename, "fasta"):
-        if seq_record.id == contig_name:
+        if seq_record.id == contig_name_test:
             print( str( seq_record.seq[start_pos_test-10:start_pos_test+30] ) )
     # test end
 
