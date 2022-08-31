@@ -32,7 +32,7 @@ dic['chrmt'] = 'NC_001224.1'
 if __name__ == "__main__":
     random.seed(random_seed)
 
-    bash_file = open('script.sh', 'w')
+    bash_file = open('script_protein_coding.sh', 'w')
 
     for seq_record in SeqIO.parse(fasta_filename, "fasta"):
         print(seq_record.id)
