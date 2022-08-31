@@ -46,6 +46,8 @@ doench -- disagreement
 
     Mouse Human Yeast
 
+    guidescan panels a,b er moto amader b,c
+
 
 repeat annotation na pele
 repeat masking tools paoa jay
@@ -58,4 +60,23 @@ make sure reproducible
 for one organism
 
 prepare everything in Fig 2
+
+
+
+Notes on genes:
+human genome kmer count
+
+multiple_vs_single
+CHM13 e multiple
+GrCh38 e single
+
+genes_multiple_v_single
+oi gene gular id gula ase
+jegular moddhe grna ase,
+
+multiple_v_single_candidates: 3 ta gene ase, jegulay
+single bar grch e, multiple in chm e ase emon gene o ase
+only 1 bar chm e emon gene o ase
+
+
 ---!>

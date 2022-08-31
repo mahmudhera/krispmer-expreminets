@@ -1,5 +1,7 @@
 *.fasta
 *.fastq
+*/.DS_Store
 .DS_Store
 *.jf
 *.log
+DS_Store
