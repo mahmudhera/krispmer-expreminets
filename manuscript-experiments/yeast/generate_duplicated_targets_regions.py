@@ -41,7 +41,7 @@ if __name__ == "__main__":
                 fname = 'target_' + contig_name + "_" + str(start_pos-75) + ':' + str(start_pos+75) + '.fasta'
                 f = open(fname, 'w')
                 f.write('> ' + 'target_' + contig_name + "_" + str(start_pos-75) + ':' + str(start_pos+75) + '\n')
-                f.write(str(seq_record.seq[start_pos-75:start_pos+75]))
+                f.write(str(seq_record.seq[start_pos-75:start_pos+75]).upper())
                 f.close()
                 bash_file.write('krispmer ' + reads_filename + ' ' + fname + ' ' + 'scores_' + fname + ' ' + str(hd) + ' -n -J mer_counts.jf -H k_spectrum_histo -n\n')
 
