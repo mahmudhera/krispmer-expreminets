@@ -1,5 +1,6 @@
 import pandas as pd
 import random
+from Bio import SeqIO
 
 num_targets = 50
 target_length = 150
