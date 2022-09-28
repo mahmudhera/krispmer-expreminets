@@ -2,7 +2,7 @@ import os
 
 def main():
     list_grna_scores = []
-    for file os.listdir('.'):
+    for file in os.listdir('.'):
         if file.endswith('.fasta'):
             print(file)
 
