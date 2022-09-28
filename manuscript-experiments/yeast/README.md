@@ -15,4 +15,4 @@ Done
 
 
 Reads downloaded from: PRJNA708301
-Only genome paired data were obtained.
+Only genome paired data were obtained

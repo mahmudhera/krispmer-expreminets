@@ -12,6 +12,7 @@ Had to do the following:
 ```
 export PYTHONPATH=/home/atif/krispmer/soft/krispmer-github-repo/kRISP-mER/kRISP-meR_source:$PYTHONPATH
 export PATH=/home/atif/krispmer/soft/bowtie2-2.4.5-linux-x86_64:$PATH
+export PATH=/home/atif/guidescan2/guidescan-cli-master/build/bin:$PATH
 ```
 
 ## Todo for the tool
