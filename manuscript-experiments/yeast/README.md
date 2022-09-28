@@ -7,11 +7,7 @@ Things we will do here:
 Done
 
 1. Generate duplicated region targets
-1. Create another folder
 1. Make krispmer run for these targets.
-1. Make guidescan2 run on the same targets.
-1. Make run using some other tool.
-1. Compare for perfect off targets.
 
 
 Reads downloaded from: PRJNA708301
