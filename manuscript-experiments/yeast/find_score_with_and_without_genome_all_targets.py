@@ -19,8 +19,21 @@ def main():
         cmd_args = ['python', 'find_score_with_genome.py', genome_jf_fname, tgt_fname, scores_fname, max_hd, out_fname]
         subprocess.call(cmd_args)
 
-        print(tgt_fname, scores_fname)
+        f = open(out_fname, 'r')
+        lines = f.readlines()
+        for line in lines:
+            line = line.strip()
+            grna = line.split(' ')[0]
+            score_with_genome = float(line.split(' ')[1])
+            score_without_genome = float(line.split(' ')[2])
+            list_grna_scores.append(score_with_genome, score_without_genome)
+
         break
+
+    sys.stdout = open('all_scores', 'w')
+	for score in list_grna_scores:
+        print(score)
+	sys.stdout.close()
 
 if __name__ == "__main__":
     main()
