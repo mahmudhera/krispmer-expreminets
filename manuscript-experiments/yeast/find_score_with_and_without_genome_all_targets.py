@@ -11,7 +11,7 @@ def main():
 
     for filename in all_fasta_files:
         tgt_fname = filename
-        genome_jf_fname = 'mer_counts.jf'
+        genome_jf_fname = 'genome_counts.jf'
         scores_fname = 'scores_' + tgt_fname
         max_hd = '3'
         out_fname = 'tmt_scores'
