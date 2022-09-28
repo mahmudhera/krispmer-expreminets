@@ -26,7 +26,7 @@ def main():
             grna = line.split(' ')[0]
             score_with_genome = float(line.split(' ')[1])
             score_without_genome = float(line.split(' ')[2])
-            list_grna_scores.append(score_with_genome, score_without_genome)
+            list_grna_scores.append((score_with_genome, score_without_genome))
 
         break
     sys.stdout = open('all_scores', 'w')
