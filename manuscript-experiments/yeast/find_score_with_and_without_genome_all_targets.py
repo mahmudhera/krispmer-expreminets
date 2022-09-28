@@ -1,5 +1,6 @@
 import os
 import subprocess
+import sys
 
 def main():
     list_grna_scores = []
