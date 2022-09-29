@@ -7,7 +7,7 @@ def main():
 
     all_fasta_files = []
     for file in os.listdir('.'):
-        if file.endswith('.fasta') and not file.startswith('scores') and not file.startswith('genome'):
+        if file.endswith('.fasta') and not file.startswith('scores') and not file.startswith('genome') and not file.startswith('target_NC'):
             all_fasta_files.append(file)
 
     print('Handling ' + str(len(all_fasta_files)) + ' targets...')
