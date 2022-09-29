@@ -8,7 +8,7 @@ from itertools import chain, combinations, product
 import sys
 from multiprocessing import Process, Manager
 
-num_threads = 2
+num_threads = 8
 num_cores = num_threads
 
 def test_parallel(arg_key, arg_val, dict):
