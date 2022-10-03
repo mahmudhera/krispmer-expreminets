@@ -69,6 +69,8 @@ if __name__ == "__main__":
     target_id = 1
     count = 0
     for chr_name, start, end in list_positions:
+        start = int(start)
+        end = int(end)
         if end < 150 or end-150 <= start:
             continue
         target_start = random.randint(start, end-150)
@@ -100,6 +102,8 @@ if __name__ == "__main__":
     count = 0
     target_id = 0
     for chr_name, start, end in list_positions:
+        start = int(start)
+        end = int(end)
         if end < 150 or end-150 <= start:
             continue
         target_start = random.randint(start, end-150)
