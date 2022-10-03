@@ -12,7 +12,7 @@ reads_filename = 'reads.fastq'
 
 if __name__ == "__main__":
     random.seed(random_seed)
-    df = pd.read_csv('MGI_MRK_Coord.rpt', delimiter='\t')
+    df = pd.read_csv('MGI_MRK_Coord.tsv', delimiter='\t')
     print(df)
     '''
     bash_file = open('script_protein_coding.sh', 'w')
