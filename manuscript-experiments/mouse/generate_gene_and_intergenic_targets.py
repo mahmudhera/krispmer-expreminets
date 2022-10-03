@@ -75,7 +75,7 @@ if __name__ == "__main__":
             continue
         target_start = random.randint(start, end-150)
         for seq_record in SeqIO.parse(fasta_filename, "fasta"):
-            if seq_record.id == dic[chr_name]:
+            if seq_record.id == chr_to_contig_id[chr_name]:
                 fname = 'target_gene_' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150) + '.fasta'
                 f = open(fname, 'w')
                 f.write('> ' + 'target_gene_' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150) + '\n')
@@ -108,7 +108,7 @@ if __name__ == "__main__":
             continue
         target_start = random.randint(start, end-150)
         for seq_record in SeqIO.parse(fasta_filename, "fasta"):
-            if seq_record.id == dic[chr_name]:
+            if seq_record.id == chr_to_contig_id[chr_name]:
                 fname = 'target_intergenic_' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150) + '.fasta'
                 f = open(fname, 'w')
                 f.write('> ' + 'target_intergenic_' + str(target_id) + '_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150) + '\n')
