@@ -88,7 +88,7 @@ if __name__ == "__main__":
     bash_file.close()
 
     # intergenic regions
-    df_intergenic = df[(df['chr']!='protein coding gene']
+    df_intergenic = df[(df['chr']!='protein coding gene')]
     bash_file = open('script_for_intergenic_targets.sh', 'w')
 
     chr_names = df_intergenic['chr'].tolist()
