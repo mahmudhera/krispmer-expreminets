@@ -53,6 +53,7 @@ if __name__ == "__main__":
     print('Unique feature types...')
     print( set( df['ftype'].tolist() ) )
 
+    '''
     df_protein_coding_genes = df[ df['ftype'] == 'protein coding gene' ]
     bash_file = open('script_for_protein_coding_targets.sh', 'w')
 
@@ -88,13 +89,14 @@ if __name__ == "__main__":
             break
 
     bash_file.close()
+    '''
 
     # intergenic regions
     df_intergenic = df[(df['chr']!='protein coding gene')]
     bash_file = open('script_for_intergenic_targets.sh', 'w')
 
     chr_names = df_intergenic['chr'].tolist()
-    start_pos = df_intergenic['start_coods'].tolist()
+    start_pos = df_intergenic['start_coord'].tolist()
     end_pos = df_intergenic['end_coord'].tolist()
 
     list_positions = list(zip(chr_names, start_pos, end_pos))
