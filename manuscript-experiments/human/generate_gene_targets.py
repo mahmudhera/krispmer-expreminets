@@ -12,8 +12,14 @@ reads_filename = 'reads.fastq'
 
 if __name__ == "__main__":
     random.seed(random_seed)
-    print('TEST')
 
+    print('reading the gbff file...')
+    gbff_filename = 'GCF_000001405.39_GRCh38.p13_genomic.gff'
+    parsed_gbff = SeqIO.parse(gbff_filename, 'genbank')
+    gbff_records = []
+    for rec in parsed_gbff:
+        print(rec)
+        break
     # read the gbff file
     # read all records into dataframe
 
