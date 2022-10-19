@@ -34,10 +34,12 @@ if __name__ == "__main__":
     print('indexing genome file...')
     record_dict = SeqIO.index(fasta_filename, "fasta")
     print('indexing complete! The keys are: ')
-    print(list(record_dict.keys()))
+    all_keys = list(record_dict.keys())
 
     num_targets_generated = 0
     for (contig_id, start_pos, end_pos) in all_genes:
+        if contig_id not in all_keys:
+            continue
         start = int(start_pos)
         end = int(end_pos)
         if end < 150 or end-150 <= start:
