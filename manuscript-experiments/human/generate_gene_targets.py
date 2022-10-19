@@ -15,16 +15,14 @@ if __name__ == "__main__":
 
     print('reading the gbff file...')
     gbff_filename = 'GCF_000001405.39_GRCh38.p13_genomic.gff'
-    parsed_gbff = SeqIO.parse(gbff_filename, 'genbank')
-    gbff_records = []
-    num_records = 0
-    for rec in parsed_gbff:
-        num_records += 1
-        for db in rec.dbxrefs:
-            if db.startswith('Assembly'):
-                assembly_id = db.split(':')[1]
-                print(assembly_id)
-    print('Number of records: {0}'.format(num_records))
+
+    df = pd.read_csv(gbff_filename, comment='#', delimiter='\t', header=None)
+    df_genes = df[ df[2].str == 'gene' ]
+    print(df_genes)
+
+    df_intergenes = df[ df[2].str == 'exon' ]
+    print(df_intergenes)
+
     # read the gbff file
     # read all records into dataframe
 
