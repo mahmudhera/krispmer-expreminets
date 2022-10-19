@@ -46,7 +46,7 @@ if __name__ == "__main__":
             continue
         target_start = random.randint(start, end-150)
         seq_record = record_dict[contig_id]
-        target_string = seq_record.seq[target_start : target_start+150]
+        target_string = str(seq_record.seq[target_start : target_start+150])
 
         chr_name = contig_id
         fname = 'target_gene_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150) + '.fasta'
