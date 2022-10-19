@@ -48,6 +48,7 @@ if __name__ == "__main__":
         seq_record = record_dict[contig_id]
         target_string = seq_record.seq[target_start : target_start+150]
 
+        chr_name = contig_id
         fname = 'target_gene_' + chr_name + "_" + str(target_start) + ':' + str(target_start+150) + '.fasta'
         f = open(fname, 'w')
         f.write('> ' + fname + '\n')
