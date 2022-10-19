@@ -18,10 +18,9 @@ if __name__ == "__main__":
 
     df = pd.read_csv(gbff_filename, comment='#', delimiter='\t', header=None)
     df_genes = df[ df[2].str.contains('gene') ]
-    print(df_genes)
-
+    df_genes = df_genes[ df_genes[2].str.startswith('gene') ]
     df_intergenes = df[ df[2].str.contains('exon') ]
-    print(df_intergenes)
+    print(df_genes)
 
     bash_file = open('script_for_protein_coding_targets.sh', 'w')
 
