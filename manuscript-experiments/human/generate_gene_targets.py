@@ -18,8 +18,11 @@ if __name__ == "__main__":
     parsed_gbff = SeqIO.parse(gbff_filename, 'genbank')
     gbff_records = []
     for rec in parsed_gbff:
-        print(rec)
-        break
+        for db in rec.dbxrefs:
+            if db.startswith('Assembly'):
+                assembly_id = db.split(':')[1]
+                print(assembly_id)
+                exit(0)
     # read the gbff file
     # read all records into dataframe
 
