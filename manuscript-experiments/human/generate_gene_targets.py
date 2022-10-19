@@ -20,7 +20,7 @@ if __name__ == "__main__":
     df_genes = df[ df[2].str.contains('gene') ]
     df_genes = df_genes[ df_genes[2].str.startswith('gene') ]
     df_intergenes = df[ df[2].str.contains('exon') ]
-    print(df_genes)
+    print(df_genes.sample(10))
 
     bash_file = open('script_for_protein_coding_targets.sh', 'w')
 
@@ -33,8 +33,9 @@ if __name__ == "__main__":
 
     print('indexing genome file...')
     record_dict = SeqIO.index(fasta_filename, "fasta")
-    print('indexing complete!')
-    
+    print('indexing complete! The keys are: ')
+    print(record_dict.keys())
+
     num_targets_generated = 0
     for (contig_id, start_pos, end_pos) in all_genes:
         start = int(start_pos)
