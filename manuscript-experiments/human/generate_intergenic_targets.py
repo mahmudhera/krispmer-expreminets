@@ -17,16 +17,13 @@ if __name__ == "__main__":
     gbff_filename = 'GCF_000001405.39_GRCh38.p13_genomic.gff'
 
     df = pd.read_csv(gbff_filename, comment='#', delimiter='\t', header=None)
-    df_genes = df[ df[2].str.contains('gene') ]
-    df_genes = df_genes[ df_genes[2].str.startswith('gene') ]
     df_intergenes = df[ df[2].str.contains('exon') ]
-    print(df_genes.sample(10))
 
-    bash_file = open('script_for_protein_coding_targets.sh', 'w')
+    bash_file = open('script_for_intergenic_targets.sh', 'w')
 
-    contig_names = df_genes[0].tolist()
-    start_positions = df_genes[3].tolist()
-    end_positions = df_genes[4].tolist()
+    contig_names = df_intergenes[0].tolist()
+    start_positions = df_intergenes[3].tolist()
+    end_positions = df_intergenes[4].tolist()
 
     all_genes = list( zip(contig_names, start_positions, end_positions) )
     random.shuffle(all_genes)
