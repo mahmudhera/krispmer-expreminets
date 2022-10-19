@@ -17,24 +17,13 @@ if __name__ == "__main__":
     gbff_filename = 'GCF_000001405.39_GRCh38.p13_genomic.gff'
 
     df = pd.read_csv(gbff_filename, comment='#', delimiter='\t', header=None)
-    df_genes = df[ df[2].str == 'gene' ]
+    df_genes = df[ df[2].str.contains('gene') and df[2].str.startswith('gene') ]
     print(df_genes)
 
-    df_intergenes = df[ df[2].str == 'exon' ]
+    df_intergenes = df[ df[2].str.contains('exon') and df[2].str.startswith('exon') ]
     print(df_intergenes)
 
-    # read the gbff file
-    # read all records into dataframe
-
-    #df.columns = ['acc_id', 'mtype', 'ftype', 'msymbol', 'mname', 'chr', 'start_coord', 'end_coord', 'strand', 'gbuild', 'pcol', 'pdisp']
-
-    #print('Unique chromosomes..')
-    #tmp_list = list(set( df['chr'].tolist() ))
-    #tmp_list.sort()
-    #print( tmp_list )
-
-    #print('Unique feature types...')
-    #print( set( df['ftype'].tolist() ) )
+    bash_file = open('script_for_protein_coding_targets.sh', 'w')
 
     '''
     df_protein_coding_genes = df[ df['ftype'] == 'protein coding gene' ]
