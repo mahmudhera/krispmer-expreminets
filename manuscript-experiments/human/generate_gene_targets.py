@@ -17,10 +17,10 @@ if __name__ == "__main__":
     gbff_filename = 'GCF_000001405.39_GRCh38.p13_genomic.gff'
 
     df = pd.read_csv(gbff_filename, comment='#', delimiter='\t', header=None)
-    df_genes = df[ df[2].str.contains('gene') and df[2].str.startswith('gene') ]
+    df_genes = df[ df[2].str.contains('gene') ]
     print(df_genes)
 
-    df_intergenes = df[ df[2].str.contains('exon') and df[2].str.startswith('exon') ]
+    df_intergenes = df[ df[2].str.contains('exon') ]
     print(df_intergenes)
 
     bash_file = open('script_for_protein_coding_targets.sh', 'w')
