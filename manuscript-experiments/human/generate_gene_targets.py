@@ -17,12 +17,14 @@ if __name__ == "__main__":
     gbff_filename = 'GCF_000001405.39_GRCh38.p13_genomic.gff'
     parsed_gbff = SeqIO.parse(gbff_filename, 'genbank')
     gbff_records = []
+    num_records = 0
     for rec in parsed_gbff:
+        num_records += 1
         for db in rec.dbxrefs:
             if db.startswith('Assembly'):
                 assembly_id = db.split(':')[1]
                 print(assembly_id)
-                exit(0)
+    print('Number of records: {0}'.format(num_records))
     # read the gbff file
     # read all records into dataframe
 
