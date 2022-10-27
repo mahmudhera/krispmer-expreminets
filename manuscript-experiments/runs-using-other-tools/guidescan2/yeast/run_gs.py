@@ -38,8 +38,8 @@ if __name__ == "__main__":
 
         try:
             df = pd.read_csv(out_filename, comment = '@', header=None, delimiter='\t')
-            df = df[9]
-            df.to_csv(out_filename)
+            df = pd.DataFrame(df[9].tolist())
+            df.to_csv(out_filename, index=False)
         except:
             f = open(out_filename, 'w')
             f.close()
