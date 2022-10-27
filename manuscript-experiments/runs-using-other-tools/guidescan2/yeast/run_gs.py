@@ -36,6 +36,10 @@ if __name__ == "__main__":
         args = cmd.split(' ')
         subprocess.call(args)
 
-        df = pd.read_csv(out_filename, comment = '@', header=None, delimiter='\t')
-        df = df[9]
-        df.to_csv(out_filename)
+        try:
+            df = pd.read_csv(out_filename, comment = '@', header=None, delimiter='\t')
+            df = df[9]
+            df.to_csv(out_filename)
+        except:
+            f = open(out_filename, 'w')
+            f.close()
