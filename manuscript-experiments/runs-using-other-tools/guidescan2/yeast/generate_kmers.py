@@ -21,7 +21,15 @@ def parse_arguments():
     parser.add_argument(
         "--kmer-length",
         help="Length of kmers to generate.",
+        type=int,
         default=20
+    )
+
+    parser.add_argument(
+        "--min-chr-length",
+        help="Minimum chromosome length to consider for kmer generation.",
+        type=int,
+        default=10_000
     )
 
     parser.add_argument(
@@ -61,14 +69,13 @@ def generate_pam_set(pam):
 
 def find_kmers(pam, k, chrm, forward=True, end=True):
     index = 0
+
     while True:
-        #print(chrm, pam, index, forward, end)
         index = chrm.find(pam, index)
+
         if index == -1:
-            #print('This!')
             break
-        #print('Reached this!')
-        #print(index)
+
         if end:
             if forward:
                 kmer = chrm[index - k:index]
@@ -83,10 +90,6 @@ def find_kmers(pam, k, chrm, forward=True, end=True):
             else:
                 kmer = chrm[index - k:index]
                 position = index - k
-        #print(position)
-        if position < 0:
-            index += 1
-            continue
 
         index += 1
 
@@ -102,6 +105,7 @@ def find_all_kmers(pam, k, chrm, end=True):
     for p in pam_set:
         for kmer, pos in find_kmers(p, k, chrm, end=end):
             yield {"sequence" : kmer, "position" : pos, "pam" : pam, "sense": "+"}
+
     for p in rev_pam_set:
         for kmer, pos in find_kmers(p, k, chrm, forward=False, end=end):
             yield {"sequence" : revcom(kmer), "position" : pos,
@@ -119,5 +123,8 @@ if __name__ == "__main__":
 
     print("id,sequence,pam,chromosome,position,sense")
     for record in SeqIO.parse(args.fasta, "fasta"):
+        if len(record) < args.min_chr_length:
+            continue
+
         for kmer in find_all_kmers(args.pam, args.kmer_length, record.seq, end=not args.start):
             output_kmer(args.prefix, record.name, kmer)
