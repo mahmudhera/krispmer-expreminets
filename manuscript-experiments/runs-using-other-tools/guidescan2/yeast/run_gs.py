@@ -3,6 +3,7 @@ import os
 from os import listdir
 from os.path import isfile, join
 import subprocess
+import pandas as pd
 
 def parse_args():
     parser = argparse.ArgumentParser(description="This script will run guidescan on the targets in input directory.\nThe genome needs to be in this directory.\nThe index computed by guidescan neeeds to in this directory\nThe resulting gRNAs will be in results directory.",
@@ -29,8 +30,12 @@ if __name__ == "__main__":
         f.close()
 
         # then call guidescan enumerate
-        out_filename = join(output_dir, 'gs_out_' + target_file.split('/')[-1].split('.fasta')[0])
+        out_filename = join(output_dir, 'gs_out_' + target_file)
         print(out_filename)
         cmd = 'guidescan enumerate -m 3 -f tmp_kmer_file ' + index_name + ' --output ' + out_filename
         args = cmd.split(' ')
         subprocess.call(args)
+
+        df = pd.read_csv(out_filename, comment = '@', header=None, delimiter='\t')
+        df = df[9]
+        df.to_csv(out_filename)
