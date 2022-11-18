@@ -36,7 +36,7 @@ def find_overlap_given_target_filename(target_filename):
             continue
 
         only_in_gs += 1
-        gs_grna = potential_grna.upper()
+        gs_grna = potential_grna.upper().strip()
         if 'CCN' in gs_grna:
             gs_grna = gs_grna[3:]
         else:
