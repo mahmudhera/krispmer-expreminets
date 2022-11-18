@@ -72,5 +72,5 @@ if __name__ == '__main__':
         print( generate_krispmer_out_filename(target_name) )
         only_krispmer, common, only_guidescan = find_overlap_given_target_filename(target_name)
         summary.append( (target_filename, only_krispmer, common, only_guidescan) )
-    df = DataFrame(summary, columns=['target_filename', 'only_in_kr', 'in_both', 'only_in_gs'])
+    df = pd.DataFrame(summary, columns=['target_filename', 'only_in_kr', 'in_both', 'only_in_gs'])
     df.to_csv('overlap_summary.csv')
