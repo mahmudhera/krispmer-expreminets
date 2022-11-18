@@ -52,7 +52,7 @@ def find_overlap_given_target_filename(target_filename):
             in_both += 1
 
     only_in_gs -= in_both
-    only_in_kr = len(all_krispmer_grnas)/2 - in_both
+    only_in_kr = max(len(all_krispmer_grnas)/2 - in_both, 0)
 
     return int(only_in_kr), int(in_both), int(only_in_gs)
 
