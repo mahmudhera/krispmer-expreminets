@@ -5,7 +5,7 @@ from os.path import isfile, join
 targets_dir_name = 'inputs'
 gs_out_dir_name = 'gs_out'
 kr_out_dir_name = 'krispmer_targets'
-cut_off_score = 1.3
+cut_off_score = 1.01
 
 def generate_gs_out_filename(tgt_name):
     # given a target filename, generate guidescan output filename
