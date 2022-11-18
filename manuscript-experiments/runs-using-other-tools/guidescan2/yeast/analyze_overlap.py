@@ -29,7 +29,6 @@ def find_overlap_given_target_filename(target_filename):
     all_gs_grnas = f.readlines()
     f.close()
 
-    print(all_krispmer_grnas)
 
     only_in_kr, in_both, only_in_gs = 0,0,0
     for potential_grna in all_gs_grnas:
@@ -51,9 +50,13 @@ def find_overlap_given_target_filename(target_filename):
             if gs_grna in kr_grna:
                 found = True
                 break
+            else:
+                print(gs_grna, kr_grna)
 
         if found:
             in_both += 1
+
+        break
 
     only_in_gs -= in_both
     only_in_kr = len(all_krispmer_grnas)/2 - in_both
