@@ -32,7 +32,7 @@ if __name__ == "__main__":
         # then call guidescan enumerate
         out_filename = join(output_dir, 'gs_out_' + target_file.split('/')[-1])
         print(out_filename)
-        cmd = 'guidescan enumerate -m 3 -f tmp_kmer_file -t 0 -n 16 ' + index_name + ' --output ' + out_filename
+        cmd = 'guidescan enumerate -m 3 -f tmp_kmer_file -t 0 -n 2 ' + index_name + ' --output ' + out_filename
         args = cmd.split(' ')
         subprocess.call(args)
 
