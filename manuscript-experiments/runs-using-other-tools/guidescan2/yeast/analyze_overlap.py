@@ -5,7 +5,7 @@ from os.path import isfile, join
 targets_dir_name = 'inputs'
 gs_out_dir_name = 'gs_out'
 kr_out_dir_name = 'krispmer_targets'
-cut_off_score = 1.01
+cut_off_score = 1.2
 
 def generate_gs_out_filename(tgt_name):
     # given a target filename, generate guidescan output filename
@@ -22,13 +22,38 @@ def find_overlap_given_target_filename(target_filename):
     guidescan_filename = generate_gs_out_filename(target_filename)
 
     df = pd.read_csv(krispmer_filename)
-    print(df.sample(10))
     df = df[ df['inverse_specificity'] <= cut_off_score ]
-    print(df.sample(10))
-    all_krispmer_targets = df['tgt_in_plus'].tolist() + df['tgt_in_minus'].tolist()
+    all_krispmer_grnas = df['tgt_in_plus'].tolist() + df['tgt_in_minus'].tolist()
 
+    f = open(guidescan_filename, 'r')
+    all_gs_grnas = f.readlines()
+    f.close()
 
-    return None
+    only_in_kr, in_both, only_in_gs = 0,0,0
+    for potential_grna in all_gs_grnas:
+        if len(potential_grna) < 20:
+            continue
+
+        only_in_gs += 1
+        gs_grna = potential_grna.upper()
+        if 'CCN' in gs_grna:
+            gs_grna = gs_grna[3:]
+        else:
+            gs_grna = gs_grna[:-3]
+
+        found = False
+        for kr_grna in all_krispmer_grnas:
+            if gs_grna in kr_grna:
+                found = True
+                break
+
+        if found:
+            in_both += 1
+
+    only_in_gs -= in_both
+    only_in_kr = len(all_krispmer_grnas)/2 - in_both
+
+    return only_in_kr, in_both, only_in_gs
 
 
 def find_all_targets():
