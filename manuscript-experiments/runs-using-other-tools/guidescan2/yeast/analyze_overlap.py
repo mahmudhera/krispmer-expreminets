@@ -43,6 +43,7 @@ def find_overlap_given_target_filename(target_filename):
         else:
             gs_grna = gs_grna[:-3]
 
+        print(potential_grna)
         print('GS grna: ' + gs_grna)
 
         found = False
