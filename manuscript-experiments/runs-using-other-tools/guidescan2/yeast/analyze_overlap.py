@@ -32,7 +32,8 @@ if __name__ == '__main__':
     target_filenames_list = find_all_targets()
     summary = []
     for target_filename in target_filenames_list:
-        target_name = target_filename.split('/')[-1]
+        target_name = str(target_filename.split('/')[-1])
+        print(target_name)
         print( generate_gs_out_filename(target_name) )
         print( generate_krispmer_out_filename(target_name) )
         only_krispmer, common, only_guidescan = find_overlap_given_target_filename(target_filename)
