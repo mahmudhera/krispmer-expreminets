@@ -47,8 +47,6 @@ def find_overlap_given_target_filename(target_filename):
             if gs_grna in kr_grna:
                 found = True
                 break
-            else:
-                print(gs_grna, kr_grna)
 
         if found:
             in_both += 1
@@ -70,9 +68,6 @@ if __name__ == '__main__':
     summary = []
     for target_filename in target_filenames_list:
         target_name = str(target_filename.split('/')[-1])
-        print(target_name)
-        print( generate_gs_out_filename(target_name) )
-        print( generate_krispmer_out_filename(target_name) )
         only_krispmer, common, only_guidescan = find_overlap_given_target_filename(target_name)
         summary.append( (target_filename, only_krispmer, common, only_guidescan) )
     df = pd.DataFrame(summary, columns=['target_filename', 'only_in_kr', 'in_both', 'only_in_gs'])
