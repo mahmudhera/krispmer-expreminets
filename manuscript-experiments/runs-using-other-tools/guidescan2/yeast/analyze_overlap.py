@@ -5,6 +5,7 @@ from os.path import isfile, join
 targets_dir_name = 'inputs'
 gs_out_dir_name = 'gs_out'
 kr_out_dir_name = 'krispmer_targets'
+cut_off_score = 1.3
 
 def generate_gs_out_filename(tgt_name):
     # given a target filename, generate guidescan output filename
@@ -17,8 +18,16 @@ def generate_krispmer_out_filename(tgt_name):
 
 
 def find_overlap_given_target_filename(target_filename):
-    # given a target file, locate the krispmer and the guidescan output file
-    # then, return overlap
+    krispmer_filename = generate_krispmer_out_filename(target_filename)
+    guidescan_filename = generate_gs_out_filename(target_filename)
+
+    df = pd.read_csv(krispmer_filename)
+    print(df.sample(10))
+    df = df[ df['inverse_specificity'] <= cut_off_score ]
+    print(df.sample(10))
+    all_krispmer_targets = df['tgt_in_plus'].tolist() + df['tgt_in_minus'].tolist()
+
+
     return None
 
 
