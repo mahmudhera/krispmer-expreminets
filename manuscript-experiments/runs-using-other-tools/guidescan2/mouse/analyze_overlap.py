@@ -68,7 +68,10 @@ if __name__ == '__main__':
     summary = []
     for target_filename in target_filenames_list:
         target_name = str(target_filename.split('/')[-1])
-        only_krispmer, common, only_guidescan = find_overlap_given_target_filename(target_name)
+        try:
+            only_krispmer, common, only_guidescan = find_overlap_given_target_filename(target_name)
+        except:
+            continue
         summary.append( (target_filename, only_krispmer, common, only_guidescan) )
     df = pd.DataFrame(summary, columns=['target_filename', 'only_in_kr', 'in_both', 'only_in_gs'])
     df.to_csv('overlap_summary.csv')
