@@ -29,6 +29,8 @@ def find_overlap_given_target_filename(target_filename):
     all_gs_grnas = f.readlines()
     f.close()
 
+    print(all_krispmer_grnas)
+
     only_in_kr, in_both, only_in_gs = 0,0,0
     for potential_grna in all_gs_grnas:
         if len(potential_grna) < 20:
@@ -40,6 +42,8 @@ def find_overlap_given_target_filename(target_filename):
             gs_grna = gs_grna[3:]
         else:
             gs_grna = gs_grna[:-3]
+
+        print('GS grna: ' + gs_grna)
 
         found = False
         for kr_grna in all_krispmer_grnas:
@@ -72,5 +76,6 @@ if __name__ == '__main__':
         print( generate_krispmer_out_filename(target_name) )
         only_krispmer, common, only_guidescan = find_overlap_given_target_filename(target_name)
         summary.append( (target_filename, only_krispmer, common, only_guidescan) )
+        exit(0)
     df = pd.DataFrame(summary, columns=['target_filename', 'only_in_kr', 'in_both', 'only_in_gs'])
     df.to_csv('overlap_summary.csv')
