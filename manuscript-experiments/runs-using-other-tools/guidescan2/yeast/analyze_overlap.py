@@ -30,7 +30,6 @@ def find_all_targets():
 
 if __name__ == '__main__':
     target_filenames_list = find_all_targets()
-    exit(-1)
     summary = []
     for target_filename in target_filenames_list:
         target_name = target_filename.split('/')[-1]
