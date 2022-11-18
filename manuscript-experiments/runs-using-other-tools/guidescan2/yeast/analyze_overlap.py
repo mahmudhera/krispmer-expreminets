@@ -11,7 +11,7 @@ def generate_gs_out_filename(tgt_name):
     return join(gs_out_dir_name, 'gs_out_'+tgt_name)
 
 
-def generate_krispmer_out_filename():
+def generate_krispmer_out_filename(tgt_name):
     # given a target filename, generate krispmer output filename
     return join(kr_out_dir_name, 'scores_'+tgt_name)
 
