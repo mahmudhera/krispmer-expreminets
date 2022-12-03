@@ -11,6 +11,15 @@ directory_kr = 'krispmer_targets'
 directory_gs = 'gs_out'
 directory_targets = 'inputs'
 
+def complement(seq):
+    complement_char = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
+    bases = list(seq)
+    bases = [complement_char[base] for base in bases]
+    return ''.join(bases)
+
+def reverse_complement(s):
+    return complement(s[::-1])
+
 def generate_krispmer_out_filename(tgt_name):
     # given a target filename, generate krispmer output filename
     return join(directory_kr, 'scores_'+tgt_name)
@@ -32,9 +41,31 @@ if __name__ == '__main__':
         subprocess.call(args)
 
         only_fname = target_file.split('/')[-1]
+
         kr_file_with_path = generate_krispmer_out_filename(only_fname)
-        
-        print(target_file, only_fname, kr_file_with_path)
+
+        df = pd.read_csv(kr_file_with_path)
+        df = df[ df['inverse_specificity'] <= cut_off_score ]
+        kr_grnas = df['tgt_in_plus'].tolist()
+
+        qf_target = jellyfish.QueryMerFile('f_23.jf')
+        qf_genome = qf = jellyfish.QueryMerFile(jf_file_kr)
+
+        total_ot_for_target = 0
+        for grna in kr_grnas:
+            mer1 = jellyfish.MerDNA(grna)
+            mer2 = jellyfish.MerDNA(reverse_complement(grna))
+            count_in_target = qf_target[mer1] + qf_target[mer2]
+            count_in_genome = qf_genome[mer1] + qf_genome[mer2]
+            ot_count = max(0, count_in_genome - count_in_target)
+
+            ot_count_kr_per_grna.append(ot_count)
+            total_ot_for_target += ot_count
+        ot_count_kr_per_tgt.append(total_ot_for_target)
+
+        print(ot_count_kr_per_tgt)
+        print(ot_count_kr_per_grna)
+
         exit(-1)
 
     # for each input file e:
