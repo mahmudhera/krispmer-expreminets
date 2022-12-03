@@ -90,6 +90,10 @@ if __name__ == '__main__':
             grna = grna.strip()
             if len(grna) < 20:
                 continue
+            if 'CCN' in grna:
+                grna = grna[3:]
+            else:
+                grna = grna[:-3]
             mer1 = jellyfish.MerDNA(grna)
             mer2 = jellyfish.MerDNA(reverse_complement(grna))
             count_in_target = qf_target[mer1] + qf_target[mer2]
