@@ -1,4 +1,7 @@
 import jellyfish
+import pandas as pd
+from os import listdir
+from os.path import isfile, join
 
 jf_file_kr = '23_mer_counts.jf'
 jf_file_gs = '20_mer_counts.jf'
