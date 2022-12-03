@@ -88,7 +88,7 @@ if __name__ == '__main__':
         total_ot_for_target = 0
         for grna in all_gs_grnas:
             grna = grna.strip()
-            if len(grna) < 20:
+            if len(grna) < 23:
                 continue
             if 'CCN' in grna:
                 grna = grna[3:]
@@ -107,4 +107,26 @@ if __name__ == '__main__':
         print(ot_count_gs_per_tgt)
         print(ot_count_gs_per_grna)
 
-        exit(-1)
+    f = open('perfect_ot_counts_krispmer_per_grna.csv', 'w')
+    for x in ot_count_kr_per_grna:
+        f.write(str(x))
+        f.write('\n')
+    f.close()
+
+    f = open('perfect_ot_counts_krispmer_per_target.csv', 'w')
+    for x in ot_count_kr_per_tgt:
+        f.write(str(x))
+        f.write('\n')
+    f.close()
+
+    f = open('perfect_ot_counts_guidescan_per_grna.csv', 'w')
+    for x in ot_count_gs_per_grna:
+        f.write(str(x))
+        f.write('\n')
+    f.close()
+
+    f = open('perfect_ot_counts_guidecan_per_target.csv', 'w')
+    for x in ot_count_gs_per_tgt:
+        f.write(str(x))
+        f.write('\n')
+    f.close()
