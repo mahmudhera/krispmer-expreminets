@@ -41,6 +41,9 @@ if __name__ == '__main__':
     ot_count_gs_per_tgt = []
     ot_count_gs_per_grna = []
 
+    qf_genome_gs = jellyfish.QueryMerFile(jf_file_gs)
+    qf_genome_kr = jellyfish.QueryMerFile(jf_file_kr)
+
     for target_file in targets:
         cmd = 'jellyfish count -m 23 -s 500M -C -o f_23.jf ' + target_file
         args = cmd.split(' ')
@@ -55,14 +58,13 @@ if __name__ == '__main__':
         kr_grnas = df['tgt_in_plus'].tolist()
 
         qf_target = jellyfish.QueryMerFile('f_23.jf')
-        qf_genome = jellyfish.QueryMerFile(jf_file_kr)
 
         total_ot_for_target = 0
         for grna in kr_grnas:
             mer1 = jellyfish.MerDNA(grna)
             mer2 = jellyfish.MerDNA(reverse_complement(grna))
             count_in_target = qf_target[mer1] + qf_target[mer2]
-            count_in_genome = qf_genome[mer1] + qf_genome[mer2]
+            count_in_genome = qf_genome_kr[mer1] + qf_genome_kr[mer2]
             ot_count = max(0, count_in_genome - count_in_target)
 
             ot_count_kr_per_grna.append(ot_count)
@@ -83,7 +85,6 @@ if __name__ == '__main__':
         subprocess.call(args)
 
         qf_target = jellyfish.QueryMerFile('f_20.jf')
-        qf_genome = jellyfish.QueryMerFile(jf_file_gs)
 
         total_ot_for_target = 0
         for grna in all_gs_grnas:
@@ -97,7 +98,7 @@ if __name__ == '__main__':
             mer1 = jellyfish.MerDNA(grna)
             mer2 = jellyfish.MerDNA(reverse_complement(grna))
             count_in_target = qf_target[mer1] + qf_target[mer2]
-            count_in_genome = qf_genome[mer1] + qf_genome[mer2]
+            count_in_genome = qf_genome_gs[mer1] + qf_genome_gs[mer2]
             ot_count = max(0, count_in_genome - count_in_target)
 
             ot_count_gs_per_grna.append(ot_count)
