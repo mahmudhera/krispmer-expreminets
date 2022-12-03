@@ -26,6 +26,10 @@ def generate_krispmer_out_filename(tgt_name):
     # given a target filename, generate krispmer output filename
     return join(directory_kr, 'scores_'+tgt_name)
 
+def generate_gs_out_filename(tgt_name):
+    # given a target filename, generate guidescan output filename
+    return join(directory_gs, 'gs_out_'+tgt_name)
+
 if __name__ == '__main__':
     mypath = directory_targets
     targets = [join(mypath, f) for f in listdir(mypath) if isfile(join(mypath, f))]
@@ -51,7 +55,7 @@ if __name__ == '__main__':
         kr_grnas = df['tgt_in_plus'].tolist()
 
         qf_target = jellyfish.QueryMerFile('f_23.jf')
-        qf_genome = qf = jellyfish.QueryMerFile(jf_file_kr)
+        qf_genome = jellyfish.QueryMerFile(jf_file_kr)
 
         total_ot_for_target = 0
         for grna in kr_grnas:
@@ -68,22 +72,34 @@ if __name__ == '__main__':
         print(ot_count_kr_per_tgt)
         print(ot_count_kr_per_grna)
 
-        exit(-1)
+        gs_file_with_path = generate_gs_out_filename(only_fname)
 
-    # for each input file e:
-        # generate 23 count file -> f_23
-        # locate the kr file -> kr
-        # for each in kr file:
-            # filter using threshold
-            # find count in genome (23)
-            # find count in f_23
-            # find ot_count
-            # record count accordingly
-        # generate 20 count file -> f_20
-        # locate the gs file -> kr
-        # for each in gs file:
-            # find count in genome (20)
-            # find count in f_23
-            # find ot_count
-            # record count accordingly
-    # report all counts
+        f = open(gs_file_with_path, 'r')
+        all_gs_grnas = f.readlines()
+        f.close()
+
+        cmd = 'jellyfish count -m 20 -s 500M -C -o f_20.jf ' + target_file
+        args = cmd.split(' ')
+        subprocess.call(args)
+
+        qf_target = jellyfish.QueryMerFile('f_20.jf')
+        qf_genome = jellyfish.QueryMerFile(jf_file_gs)
+
+        total_ot_for_target = 0
+        for grna in all_gs_grnas:
+            if len(grna) < 20:
+                continue
+            mer1 = jellyfish.MerDNA(grna)
+            mer2 = jellyfish.MerDNA(reverse_complement(grna))
+            count_in_target = qf_target[mer1] + qf_target[mer2]
+            count_in_genome = qf_genome[mer1] + qf_genome[mer2]
+            ot_count = max(0, count_in_genome - count_in_target)
+
+            ot_count_gs_per_grna.append(ot_count)
+            total_ot_for_target += ot_count
+        ot_count_gs_per_tgt.append(total_ot_for_target)
+
+        print(ot_count_gs_per_tgt)
+        print(ot_count_gs_per_grna)
+
+        exit(-1)
