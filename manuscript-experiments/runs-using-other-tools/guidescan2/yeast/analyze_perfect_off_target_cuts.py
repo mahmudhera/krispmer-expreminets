@@ -13,7 +13,7 @@ directory_targets = 'inputs'
 
 def generate_krispmer_out_filename(tgt_name):
     # given a target filename, generate krispmer output filename
-    return join(kr_out_dir_name, 'scores_'+tgt_name)
+    return join(directory_kr, 'scores_'+tgt_name)
 
 if __name__ == '__main__':
     mypath = directory_targets
@@ -32,9 +32,8 @@ if __name__ == '__main__':
         subprocess.call(args)
 
         only_fname = target_file.split('/')[-1]
-        kr_fname = generate_krispmer_out_filename(only_fname)
-        kr_file_with_path = join(directory_kr, kr_fname)
-
+        kr_file_with_path = generate_krispmer_out_filename(only_fname)
+        
         print(target_file, only_fname, kr_file_with_path)
         exit(-1)
 
