@@ -87,6 +87,7 @@ if __name__ == '__main__':
 
         total_ot_for_target = 0
         for grna in all_gs_grnas:
+            grna = grna.strip()
             if len(grna) < 20:
                 continue
             mer1 = jellyfish.MerDNA(grna)
