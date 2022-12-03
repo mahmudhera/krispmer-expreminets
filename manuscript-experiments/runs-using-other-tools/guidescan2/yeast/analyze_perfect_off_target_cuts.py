@@ -2,6 +2,7 @@ import jellyfish
 import pandas as pd
 from os import listdir
 from os.path import isfile, join
+import subprocess
 
 jf_file_kr = '23_mer_counts.jf'
 jf_file_gs = '20_mer_counts.jf'
@@ -10,15 +11,33 @@ directory_kr = 'krispmer_targets'
 directory_gs = 'gs_out'
 directory_targets = 'inputs'
 
+def generate_krispmer_out_filename(tgt_name):
+    # given a target filename, generate krispmer output filename
+    return join(kr_out_dir_name, 'scores_'+tgt_name)
+
 if __name__ == '__main__':
     mypath = directory_targets
     targets = [join(mypath, f) for f in listdir(mypath) if isfile(join(mypath, f))]
     print(len(targets))
     print(targets[0])
-    # ot_count_kr_per_tgt = []
-    # ot_count_kr_per_grna = []
-    # ot_count_gs_per_tgt = []
-    # ot_count_gs_per_grna = []
+
+    ot_count_kr_per_tgt = []
+    ot_count_kr_per_grna = []
+    ot_count_gs_per_tgt = []
+    ot_count_gs_per_grna = []
+
+    for target_file in targets:
+        cmd = 'jellyfish count -m 23 -s 500M -C -o f_23.jf ' + target_file
+        args = cmd.split(' ')
+        subprocess.call(args)
+
+        only_fname = target_file.split('/')[-1]
+        kr_fname = generate_krispmer_out_filename(only_fname)
+        kr_file_with_path = join(directory_kr, kr_fname)
+
+        print(target_file, only_fname, kr_file_with_path)
+        exit(-1)
+
     # for each input file e:
         # generate 23 count file -> f_23
         # locate the kr file -> kr
