@@ -11,6 +11,8 @@ directory_kr = 'krispmer_targets'
 directory_gs = 'gs_out'
 directory_targets = 'inputs'
 
+cut_off_score = 1.2
+
 def complement(seq):
     complement_char = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
     bases = list(seq)
