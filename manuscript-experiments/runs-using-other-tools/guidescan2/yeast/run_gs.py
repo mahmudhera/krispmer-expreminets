@@ -41,5 +41,5 @@ if __name__ == "__main__":
             df = pd.DataFrame(df[9].tolist())
             df.to_csv('extracted_'+out_filename, index=False)
         except:
-            f = open(out_filename, 'w')
+            f = open('extracted_'+out_filename, 'w')
             f.close()
