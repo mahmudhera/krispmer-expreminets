@@ -39,7 +39,7 @@ if __name__ == "__main__":
         try:
             df = pd.read_csv(out_filename, comment = '@', header=None, delimiter='\t')
             df = pd.DataFrame(df[9].tolist())
-            df.to_csv('extracted_'+out_filename, index=False)
+            df.to_csv(out_filename+'_extracted', index=False)
         except:
-            f = open('extracted_'+out_filename, 'w')
+            f = open(out_filename+'_extracted', 'w')
             f.close()
