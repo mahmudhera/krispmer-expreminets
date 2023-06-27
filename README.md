@@ -18,3 +18,10 @@ export PATH=/home/atif/guidescan2/guidescan-cli-master/build/bin:$PATH
 ## Todo for the tool
 1. Add on-tgt activity scores
 1. Fix package error
+
+
+Time to run on human genome:
+----------------------------
+Hamming distance = 3, time = ~14 sec, mem = 11.7 GB
+Hamming distance = 2, time = ~7  sec, mem = 0.64 GB
+Hamming distance = 1, time = ~6  sec, mem = 0.14 GB
