@@ -60,12 +60,14 @@ def main():
     parser.add_argument('target_dir_name', help='Full path to the directory containing all target sequences')
     parser.add_argument('grna_dir_name', help='Full path to the directory containing all grnas')
     parser.add_argument('genome_jf_filename', help='Full path to the jellyfish counted file for the genome')
+    parser.add_argument('cutoff_score', type=float, help='cut off score to consider')
 
     args = parser.parse_args()
 
     target_dir_name = args.target_dir_name
     grna_dir_name = args.grna_dir_name
     genome_jf_filename = args.genome_jf_filename
+    cutoff_score = args.cutoff_score
 
     # jellyfish query file
     qf_genome = jellyfish.QueryMerFile(genome_jf_filename)
@@ -82,7 +84,7 @@ def main():
         grna_file.close()
         grna_list = []
         for line in lines[1:]:
-            if float(line.split(',')[2]) > 1.5:
+            if float(line.split(',')[2]) > cutoff_score:
                 continue
             grna_list.append( (line.split(',')[0], line.split(',')[1]) )
         print(grna_list)
