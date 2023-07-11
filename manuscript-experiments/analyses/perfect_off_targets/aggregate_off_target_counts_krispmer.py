@@ -87,14 +87,14 @@ def main():
             if float(line.split(',')[2]) > cutoff_score:
                 continue
             grna_list.append( (line.split(',')[0], line.split(',')[1]) )
-        print(grna_list)
+        #print(grna_list)
 
         # get the target sequence
         tgt_f = open(target_file, 'r')
         lines = tgt_f.readlines()
         tgt_f.close()
         target_sequence = ''.join( [line.strip().upper() for line in lines[1:]] )
-        print(target_sequence)
+        #print(target_sequence)
 
         for tgt_in_plus, tgt_in_minus in grna_list:
             num_occurrences_in_target = target_sequence.count(tgt_in_plus)+target_sequence.count(tgt_in_minus)
