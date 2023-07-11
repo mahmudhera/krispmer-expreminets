@@ -1,6 +1,47 @@
 import argparse
 import os
 import dna_jellyfish as jellyfish
+import trie
+
+def complement(seq):
+    """
+    generates the complement sequence, e.g.: ACGT-->TCGA
+    :param seq: dna sequence
+    :return: complement
+    """
+    complement_char = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
+    bases = list(str(seq))
+    bases = [complement_char[base] for base in bases]
+    return ''.join(bases)
+
+def reverse_complement(s):
+    return complement(s[::-1])
+
+def hamming_circle(s, n, alphabet):
+    """Generate strings over alphabet whose Hamming distance from s is
+    exactly n.
+    >>> sorted(hamming_circle('abc', 0, 'abc'))
+    ['abc']
+    >>> sorted(hamming_circle('abc', 1, 'abc'))
+    ['aac', 'aba', 'abb', 'acc', 'bbc', 'cbc']
+    >>> sorted(hamming_circle('aaa', 2, 'ab'))
+    ['abb', 'bab', 'bba']
+    """
+    return_list = []
+    for positions in combinations(range(len(s)), n):
+        for replacements in product(range(len(alphabet) - 1), repeat=n):
+            cousin = list(s)
+            for p, r in zip(positions, replacements):
+                if cousin[p] == alphabet[r]:
+                    cousin[p] = alphabet[-1]
+                else:
+                    cousin[p] = alphabet[r]
+            return_list_append(''.join(cousin))
+    return return_list
+
+def generate_adjacent_mers(sequence, hamming_distance):
+	alphabet = 'AGCT'
+	return hamming_circle(sequence, hamming_distance, alphabet)
 
 def get_all_files(directory):
     files = os.listdir(directory)
@@ -55,8 +96,18 @@ def main():
         for tgt_in_plus, tgt_in_minus in grna_list:
             num_occurrences_in_target = target_sequence.count(tgt_in_plus)+target_sequence.count(tgt_in_minus)
             num_occurrences_in_genome = qf_genome[jellyfish.MerDNA(tgt_in_plus)] + qf_genome[jellyfish.MerDNA(tgt_in_minus)]
-            ot_count = max(0, num_occurrences_in_genome - num_occurrences_in_target)
-            print(tgt_in_plus, ot_count)
+            ot_count_0_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
+
+
+            sequences_with_one_distance = set(generate_adjacent_mers(tgt_in_plus, 1))
+            num_occurrences_in_target = 0
+            num_occurrences_in_genome = 0
+            for potential_off_target in sequences_with_one_distance:
+                num_occurrences_in_target += target_sequence.count(potential_off_target) + target_sequence.count(reverse_complement(potential_off_target))
+                num_occurrences_in_genome += qf_genome[jellyfish.MerDNA(potential_off_target)] + qf_genome[jellyfish.MerDNA(reverse_complement(potential_off_target))]
+            ot_count_1_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
+
+            print(target_file.split('/')[-1], tgt_in_plus, ot_count_0_mismatch, ot_count_1_mismatch)
             # <target_filename, grna, ot_count, type> add this to the summary file
 
 if __name__ == '__main__':
