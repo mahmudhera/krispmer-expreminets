@@ -2,6 +2,7 @@ import argparse
 import os
 import dna_jellyfish as jellyfish
 import trie
+from itertools import chain, combinations, product
 
 def complement(seq):
     """
