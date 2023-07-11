@@ -37,7 +37,7 @@ def hamming_circle(s, n, alphabet):
                     cousin[p] = alphabet[-1]
                 else:
                     cousin[p] = alphabet[r]
-            return_list_append(''.join(cousin))
+            return_list.append(''.join(cousin))
     return return_list
 
 def generate_adjacent_mers(sequence, hamming_distance):
