@@ -88,9 +88,9 @@ def main():
         print(grna_list)
 
         # get the target sequence
-        target_file = open(target_file, 'r')
-        lines = target_file.readlines()
-        target_file.close()
+        tgt_f = open(target_file, 'r')
+        lines = tgt_f.readlines()
+        tgt_f.close()
         target_sequence = ''.join( [line.strip().upper() for line in lines[1:]] )
         print(target_sequence)
 
@@ -108,7 +108,7 @@ def main():
                 num_occurrences_in_genome += qf_genome[jellyfish.MerDNA(potential_off_target)] + qf_genome[jellyfish.MerDNA(reverse_complement(potential_off_target))]
             ot_count_1_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
 
-            print(target_file.split('/')[-1], tgt_in_plus, ot_count_0_mismatch, ot_count_1_mismatch)
+            print(str(target_file).split('/')[-1], tgt_in_plus, ot_count_0_mismatch, ot_count_1_mismatch)
             # <target_filename, grna, ot_count, type> add this to the summary file
 
 if __name__ == '__main__':
