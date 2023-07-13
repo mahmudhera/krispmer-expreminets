@@ -59,7 +59,7 @@ def main():
             num_mismatches_list = df_this_grna['mismatchCount'].tolist()
             a = num_mismatches_list.count(0)
             b = num_mismatches_list.count(1)
-            c = off_target_count - (a+b)
+            c = int(off_target_count) - (a+b)
 
             ot_count_0_mismatch, ot_count_1_mismatch, ot_count_2_mismatch = a,b,c
             print(str(target_file).split('/')[-1], grna, ot_count_0_mismatch, ot_count_1_mismatch, ot_count_2_mismatch)
