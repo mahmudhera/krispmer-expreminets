@@ -98,15 +98,15 @@ def main():
 
         alphabet = 'ACGT'
         # for every grna
-        for grna in grna_list:
+        for grna_orig in grna_list:
             # skip if len != 23
 
-            if not len(grna) == 23:
+            if not len(grna_orig) == 23:
                 continue
             candidate_grnas = []
             # generate all representations of the grna (N = ACGT)
             for nucleotide in alphabet:
-                candidate_grna = grna.replace('N', nucleotide)
+                candidate_grna = grna_orig.replace('N', nucleotide)
                 # keep if this is in the target seq
                 if candidate_grna in target_sequence or reverse_complement(candidate_grna) in target_sequence:
                     candidate_grnas.append(candidate_grna)
@@ -145,7 +145,7 @@ def main():
                 num_occurrences_in_genome += qf_genome[jellyfish.MerDNA(potential_off_target)] + qf_genome[jellyfish.MerDNA(reverse_complement(potential_off_target))]
             ot_count_2_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
 
-            print(str(target_file).split('/')[-1], grna, ot_count_0_mismatch, ot_count_1_mismatch, ot_count_2_mismatch)
+            print(str(target_file).split('/')[-1], grna_orig, ot_count_0_mismatch, ot_count_1_mismatch, ot_count_2_mismatch)
             # <target_filename, grna, ot_count, type> add this to the summary file
 
 if __name__ == '__main__':
