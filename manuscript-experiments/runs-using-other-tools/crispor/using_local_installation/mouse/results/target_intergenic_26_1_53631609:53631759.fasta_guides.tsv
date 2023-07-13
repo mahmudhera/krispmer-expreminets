@@ -1,0 +1,17 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_intergenic_26_1_53631609:53631759	55forw	GTGTCACTGTGGGTGTTGCCTGG	65	289	intergenic:Dnahc7a-Stk17b	46	49	76	85	ggc
+ target_intergenic_26_1_53631609:53631759	19rev	GTGACACACCCATTCCAACCAGG	0	11713	intergenic:Dnahc7a-Stk17b	66	44	81	86	GrafOK
+ target_intergenic_26_1_53631609:53631759	21forw	TTGTTGGAATAGGTGTGACCTGG	0	4066	intergenic:Dnahc7a-Stk17b	56	50	84	79	GrafOK
+ target_intergenic_26_1_53631609:53631759	25forw	TGGAATAGGTGTGACCTGGTTGG	0	12798	intergenic:Dnahc7a-Stk17b	54	62	72	86	GrafOK
+ target_intergenic_26_1_53631609:53631759	30forw	TAGGTGTGACCTGGTTGGAATGG	0	5741	intergenic:Dnahc7a-Stk17b	50	59	67	78	GrafOK
+ target_intergenic_26_1_53631609:53631759	31forw	AGGTGTGACCTGGTTGGAATGGG	0	21952	intergenic:Dnahc7a-Stk17b	50	62	65	71	GrafOK
+ target_intergenic_26_1_53631609:53631759	44forw	TTGGAATGGGTGTGTCACTGTGG	0	17386	intergenic:Dnahc7a-Stk17b	56	63	66	73	GrafOK
+ target_intergenic_26_1_53631609:53631759	45forw	TGGAATGGGTGTGTCACTGTGGG	0	17037	intergenic:Dnahc7a-Stk17b	53	78	62	59	GrafOK
+ target_intergenic_26_1_53631609:53631759	53rev	CTAGTGAAAGACTGACTTCCAGG	0	8240	intergenic:Dnahc7a-Stk17b	31	44	67	88	tt
+ target_intergenic_26_1_53631609:53631759	79rev	AGTTCTATGTCTTCATCTAAAGG	0	15170	intergenic:Dnahc7a-Stk17b	43	28	76	76	GrafOK
+ target_intergenic_26_1_53631609:53631759	109rev	CCAGGCAGGCATGGCACAGGAGG	0	13156	intergenic:Dnahc7a-Stk17b	54	73	60	69	GrafOK
+ target_intergenic_26_1_53631609:53631759	112rev	TATCCAGGCAGGCATGGCACAGG	0	15052	intergenic:Dnahc7a-Stk17b	52	60	62	72	GrafOK
+ target_intergenic_26_1_53631609:53631759	118rev	TGGCAGTATCCAGGCAGGCATGG	0	24467	intergenic:Dnahc7a-Stk17b	53	51	70	69	GrafOK
+ target_intergenic_26_1_53631609:53631759	123rev	GAGCATGGCAGTATCCAGGCAGG	0	19215	intergenic:Dnahc7a-Stk17b	60	68	66	79	GrafOK
+ target_intergenic_26_1_53631609:53631759	127rev	GTGGGAGCATGGCAGTATCCAGG	0	14831	intergenic:Dnahc7a-Stk17b	48	57	71	84	GrafOK
+ target_intergenic_26_1_53631609:53631759	129forw	CCTCCTGTGCCATGCCTGCCTGG	0	14448	intergenic:Dnahc7a-Stk17b	33	34	73	83	ggc

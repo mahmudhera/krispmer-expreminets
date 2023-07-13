@@ -1,0 +1,13 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_intergenic_24_12_80436280:80436430	31forw	TAGACCAACAGTTCAATCTCTGG	82	108	intergenic:Dcaf5-Scarna3b	41	24	75	75	tt
+ target_intergenic_24_12_80436280:80436430	108rev	GCTCATTGGTGGAGGACTCCAGG	81	105	intergenic:Dcaf5-Scarna3b	41	37	80	83	GrafOK
+ target_intergenic_24_12_80436280:80436430	110forw	GTCTAAAGGACATGTGAGCCTGG	75	127	intergenic:Dcaf5-Scarna3b	43	33	75	84	ggc
+ target_intergenic_24_12_80436280:80436430	68rev	CTTCATGATTATCAAGCATCAGG	74	145	intergenic:Dcaf5-Scarna3b	42	40	68	79	GrafOK
+ target_intergenic_24_12_80436280:80436430	119rev	AAATCAGTTTTGCTCATTGGTGG	74	182	intergenic:Dcaf5-Scarna3b	52	52	55	84	GrafOK
+ target_intergenic_24_12_80436280:80436430	60rev	TTATCAAGCATCAGGTTGCTTGG	71	165	intergenic:Dcaf5-Scarna3b	49	25	65	85	GrafOK
+ target_intergenic_24_12_80436280:80436430	116rev	TCAGTTTTGCTCATTGGTGGAGG	70	205	intergenic:Dcaf5-Scarna3b	51	45	60	56	GrafOK
+ target_intergenic_24_12_80436280:80436430	15rev	GTGCCCAGAGATTGAACTGTTGG	65	216	intergenic:Dcaf5-Scarna3b	56	37	76	82	GrafOK
+ target_intergenic_24_12_80436280:80436430	32forw	AGACCAACAGTTCAATCTCTGGG	65	204	intergenic:Dcaf5-Scarna3b	53	42	72	76	tt
+ target_intergenic_24_12_80436280:80436430	122rev	GTGAAATCAGTTTTGCTCATTGG	65	216	intergenic:Dcaf5-Scarna3b	43	40	62	85	GrafOK
+ target_intergenic_24_12_80436280:80436430	96forw	TTGATAATCATGAAGTCTAAAGG	61	178	intergenic:Dcaf5-Scarna3b	46	32	67	80	GrafOK
+ target_intergenic_24_12_80436280:80436430	2rev	GAACTGTTGGTCTAGAGCAGTGG	46	313	intergenic:Dcaf5-Scarna3b	63	38	79	72	GrafOK

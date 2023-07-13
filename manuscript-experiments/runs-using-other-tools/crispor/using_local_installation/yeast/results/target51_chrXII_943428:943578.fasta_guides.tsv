@@ -1,0 +1,11 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target51_chrXII_943428:943578	17rev	GAAAAGGCTCATATGATTCTTGG	8	12	exon:YBL100W-A/YBL100W-B	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	tt
+ target51_chrXII_943428:943578	33rev	TCGGTATGCAAGTACTGAAAAGG	8	45	exon:YDR261W-A/YDR261W-B	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target51_chrXII_943428:943578	52rev	ATGTACAGGACCAAATATATCGG	8	15	exon:YDR210W-A/YDR210W-B	46	51	65	85	GrafOK
+ target51_chrXII_943428:943578	62forw	TACTTGCATACCGATATATTTGG	8	48	intergenic:tT(AGU)N2-tP(UGG)N2	24	25	64	90	tt
+ target51_chrXII_943428:943578	66rev	CTTTTCGGTAAGTGATGTACAGG	8	14	exon:YBL100W-A/YBL100W-B	53	55	56	70	GrafOK
+ target51_chrXII_943428:943578	81rev	AAGTAAGAAGGTGCACTTTTCGG	8	46	exon:YOR192C-B/YOR192C-A	31	50	58	82	tt
+ target51_chrXII_943428:943578	93rev	GTAAACGATATAAAGTAAGAAGG	8	12	exon:YBL100W-A/YBL100W-B	51	13	66	87	GrafOK
+ target51_chrXII_943428:943578	127rev	TGGGTACACCCATTGGAATCTGG	8	13	exon:YDR210W-A/YDR210W-B	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target51_chrXII_943428:943578	138forw	ATGAGAAAACCAGATTCCAATGG	8	13	exon:YBL100W-A/YBL100W-B	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target51_chrXII_943428:943578	139forw	TGAGAAAACCAGATTCCAATGGG	8	15	intergenic:tT(AGU)N2-tP(UGG)N2	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK

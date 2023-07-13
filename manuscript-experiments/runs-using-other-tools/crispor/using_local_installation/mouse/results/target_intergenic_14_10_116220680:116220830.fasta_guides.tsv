@@ -1,0 +1,5 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_intergenic_14_10_116220680:116220830	75rev	TTTGAAGGGTTTTTAGACTAAGG	77	188	exon:Ptprb	41	56	60	72	GrafOK
+ target_intergenic_14_10_116220680:116220830	67rev	GTTTTTAGACTAAGGAGAGCTGG	72	142	exon:Ptprb	52	2	77	82	GrafOK
+ target_intergenic_14_10_116220680:116220830	89rev	ACTTAGAAAGAGCATTTGAAGGG	38	500	exon:Ptprb	53	36	55	78	GrafOK
+ target_intergenic_14_10_116220680:116220830	90rev	TACTTAGAAAGAGCATTTGAAGG	24	361	exon:Ptprb	35	15	54	82	GrafOK

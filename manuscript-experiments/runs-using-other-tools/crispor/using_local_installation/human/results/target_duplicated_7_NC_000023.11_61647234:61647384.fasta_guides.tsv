@@ -1,0 +1,14 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_duplicated_7_NC_000023.11_61647234:61647384	10rev	TTCAAAACTGCTCCATCAAAAGG	0	0		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target_duplicated_7_NC_000023.11_61647234:61647384	34rev	TTGCAGATTCCAAAGAAAGAGGG	0	0		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target_duplicated_7_NC_000023.11_61647234:61647384	35rev	CTTGCAGATTCCAAAGAAAGAGG	0	0		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target_duplicated_7_NC_000023.11_61647234:61647384	45forw	GTTTTGAAACCCTCTTTCTTTGG	0	0		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	tt
+ target_duplicated_7_NC_000023.11_61647234:61647384	56forw	CTCTTTCTTTGGAATCTGCAAGG	0	0		49	14	65	90	GrafOK
+ target_duplicated_7_NC_000023.11_61647234:61647384	57forw	TCTTTCTTTGGAATCTGCAAGGG	0	0		50	28	66	72	GrafOK
+ target_duplicated_7_NC_000023.11_61647234:61647384	58forw	CTTTCTTTGGAATCTGCAAGGGG	0	0		58	40	65	72	GrafOK
+ target_duplicated_7_NC_000023.11_61647234:61647384	66forw	GGAATCTGCAAGGGGATATGTGG	0	0		55	38	68	92	GrafOK
+ target_duplicated_7_NC_000023.11_61647234:61647384	70rev	TTCCAGTGAAATCTTGAAAGAGG	0	12245	intergenic:ZXDA-SPIN4/SPIN4-AS1	62	41	72	76	GrafOK
+ target_duplicated_7_NC_000023.11_61647234:61647384	88forw	GACCTCTTTCAAGATTTCACTGG	0	11877	intergenic:ZXDA-SPIN4/SPIN4-AS1	46	9	64	83	GrafOK
+ target_duplicated_7_NC_000023.11_61647234:61647384	94forw	TTTCAAGATTTCACTGGAAACGG	0	0		37	30	62	71	GrafOK
+ target_duplicated_7_NC_000023.11_61647234:61647384	95forw	TTCAAGATTTCACTGGAAACGGG	0	0		34	37	63	76	GrafOK
+ target_duplicated_7_NC_000023.11_61647234:61647384	133forw	GAACTAAACAGAAGCATTCTCGG	0	0		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	tt

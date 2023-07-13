@@ -1,0 +1,4 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_intergenic_38_6_37345119:37345269	32forw	GTACTTAGCTAAACAGAGACAGG	67	151	intron:Creb3l2	53	27	65	75	GrafOK
+ target_intergenic_38_6_37345119:37345269	88forw	CTTTTATAAATTCTGCAATTTGG	59	368	intron:Creb3l2	20	31	68	83	GrafOK
+ target_intergenic_38_6_37345119:37345269	115forw	TAAATGAAAAAGTGTTCTTCTGG	52	433	intron:Creb3l2	26	10	74	64	tt

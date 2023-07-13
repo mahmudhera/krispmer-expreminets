@@ -1,0 +1,6 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_gene_9_9_56616240:56616390	123forw	GTCATTCTGACACTCATAACAGG	76	126	intergenic:Lingo1-Odf3l1	42	47	58	75	GrafOK
+ target_gene_9_9_56616240:56616390	101forw	TTCTAACACACTAATAACATGGG	74	171	intergenic:Lingo1-Odf3l1	63	32	59	77	GrafOK
+ target_gene_9_9_56616240:56616390	100forw	ATTCTAACACACTAATAACATGG	70	165	intergenic:Lingo1-Odf3l1	50	13	56	81	GrafOK
+ target_gene_9_9_56616240:56616390	59forw	CACACATGAACATTTAGGCATGG	66	328	intergenic:Lingo1-Odf3l1	63	20	73	86	GrafOK
+ target_gene_9_9_56616240:56616390	54forw	ACATTCACACATGAACATTTAGG	46	494	intergenic:Lingo1-Odf3l1	41	30	77	82	tt

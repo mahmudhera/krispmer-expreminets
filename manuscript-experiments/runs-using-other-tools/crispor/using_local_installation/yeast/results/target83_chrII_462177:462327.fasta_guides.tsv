@@ -1,0 +1,5 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target83_chrII_462177:462327	51forw	CTGTATGATAAAATATTATAGGG	100	0	exon:SUS1	25	26	58	78	GrafOK
+ target83_chrII_462177:462327	97rev	TGAAATTCTAATAAATGTGACGG	100	1	exon:SUS1	58	36	60	80	GrafOK
+ target83_chrII_462177:462327	50forw	ACTGTATGATAAAATATTATAGG	99	3	exon:SUS1	28	15	57	65	tt
+ target83_chrII_462177:462327	52forw	TGTATGATAAAATATTATAGGGG	99	2	exon:SUS1	54	30	58	82	GrafOK

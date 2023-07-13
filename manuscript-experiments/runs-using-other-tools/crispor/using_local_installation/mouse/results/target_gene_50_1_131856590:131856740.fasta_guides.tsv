@@ -1,0 +1,6 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_gene_50_1_131856590:131856740	31rev	GTGGTCTGTAATCCTATGACAGG	75	242	intron:Nucks1	57	53	68	82	GrafOK
+ target_gene_50_1_131856590:131856740	50rev	AACATTTTGGCAATTTGAAGTGG	64	207	intron:Nucks1	55	12	76	68	GrafOK
+ target_gene_50_1_131856590:131856740	39forw	TTTGCATTTTAGCCTGTCATAGG	58	271	intron:Nucks1	51	46	70	84	GrafOK
+ target_gene_50_1_131856590:131856740	63rev	ATCTAAATTATGTAACATTTTGG	46	377	intron:Nucks1	25	24	74	84	tt
+ target_gene_50_1_131856590:131856740	141forw	ACACACACACACACACACACAGG	0	0		66	41	70	86	GrafOK

@@ -1,0 +1,6 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_intergenic_12_13_79084003:79084153	42forw	CAGAAAGGTATTTAATGATAGGG	66	245	intergenic:U7-SNORA48	39	55	68	69	GrafOK
+ target_intergenic_12_13_79084003:79084153	41forw	ACAGAAAGGTATTTAATGATAGG	64	255	intergenic:U7-SNORA48	47	31	68	80	GrafOK
+ target_intergenic_12_13_79084003:79084153	68rev	CAAAGCTGGATGTTGAAAAATGG	62	254	intergenic:U7-SNORA48	39	49	73	80	GrafOK
+ target_intergenic_12_13_79084003:79084153	82rev	CTAAATAATTCTAGCAAAGCTGG	54	252	intergenic:U7-SNORA48	42	13	71	86	GrafOK
+ target_intergenic_12_13_79084003:79084153	27forw	AATTTATTATTGGAACAGAAAGG	49	421	intergenic:U7-SNORA48	60	33	71	89	GrafOK

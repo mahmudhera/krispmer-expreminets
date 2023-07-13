@@ -1,0 +1,3 @@
+seqId	guideId	guideSeq	offtargetSeq	mismatchPos	mismatchCount	mitOfftargetScore	cfdOfftargetScore	chrom	start	end	strand	locusDesc
+ target19_chrX_461849:461999	81rev	GCTTTGCATAAAGGTCTGCGTGG	GTTTTGCATAAAGTTTTGCATGG	.*...........*.*...*	4	0.0178741764085	0.0699300700804	chrIV	854789	854811	+	exon:YDR199W/VPS64
+ target19_chrX_461849:461999	108forw	GACCTTTATGCAAAGCTATACGG	GAACTTTATGAAAAGGTGTACGG	..*.......*....*.*..	4	0.02920967812	0.0400000000554	chrIV	261762	261784	+	exon:TRM3

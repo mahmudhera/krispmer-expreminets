@@ -1,0 +1,7 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_duplicated_4_NW_023337853.1_26536:26686	72forw	CTGTTGAATTTTGATCATGAAGG	58	256		60	42	66	74	GrafOK
+ target_duplicated_4_NW_023337853.1_26536:26686	95forw	CACATTGGATTTTTGTTTCTTGG	38	480		16	20	66	71	tt
+ target_duplicated_4_NW_023337853.1_26536:26686	80forw	TTTTGATCATGAAGGCACATTGG	20	343	intergenic:Gap-Vmn1r238	48	27	68	91	GrafOK
+ target_duplicated_4_NW_023337853.1_26536:26686	126forw	TTTTTTTTGTTCGTTTGTTTTGG	0	0		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	tt
+ target_duplicated_4_NW_023337853.1_26536:26686	140forw	TTGTTTTGGTTTTTCGAGACAGG	0	0		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target_duplicated_4_NW_023337853.1_26536:26686	141forw	TGTTTTGGTTTTTCGAGACAGGG	0	0		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK

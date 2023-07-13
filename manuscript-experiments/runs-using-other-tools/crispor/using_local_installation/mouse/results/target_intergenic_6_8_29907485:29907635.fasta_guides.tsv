@@ -1,0 +1,11 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_intergenic_6_8_29907485:29907635	108rev	ACAAAATGTGACCTTAGCTTTGG	72	190	intergenic:Unc5d-Dusp26	39	33	60	71	tt
+ target_intergenic_6_8_29907485:29907635	117forw	TACACTTGTAGCCAAAGCTAAGG	57	179	intergenic:Unc5d-Dusp26	52	35	72	76	GrafOK
+ target_intergenic_6_8_29907485:29907635	62forw	TCCACAACATAATTACACATGGG	12	184	intergenic:Unc5d-Dusp26	70	43	58	87	GrafOK
+ target_intergenic_6_8_29907485:29907635	69rev	CAGAGTTTGGAGGACAATAATGG	11	931	intergenic:Unc5d-Dusp26	38	58	63	79	GrafOK
+ target_intergenic_6_8_29907485:29907635	61forw	GTCCACAACATAATTACACATGG	9	168	intergenic:Unc5d-Dusp26	62	-11	52	84	GrafOK
+ target_intergenic_6_8_29907485:29907635	43rev	TCCCATGTGTAATTATGTTGTGG	7	189	intergenic:Unc5d-Dusp26	56	36	53	79	GrafOK
+ target_intergenic_6_8_29907485:29907635	10rev	CCATCTCTATCCTAATTTCTTGG	3	307	intergenic:Unc5d-Dusp26	25	21	60	84	tt
+ target_intergenic_6_8_29907485:29907635	30forw	CCAAGAAATTAGGATAGAGATGG	3	374	intergenic:Unc5d-Dusp26	53	34	61	73	GrafOK
+ target_intergenic_6_8_29907485:29907635	79rev	GTGTATTCATCAGAGTTTGGAGG	3	241	intergenic:Unc5d-Dusp26	55	46	55	84	GrafOK
+ target_intergenic_6_8_29907485:29907635	82rev	CAAGTGTATTCATCAGAGTTTGG	3	230	intergenic:Unc5d-Dusp26	45	59	63	78	GrafOK

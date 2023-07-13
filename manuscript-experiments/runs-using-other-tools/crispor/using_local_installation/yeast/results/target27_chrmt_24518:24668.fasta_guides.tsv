@@ -1,0 +1,3 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target27_chrmt_24518:24668	21forw	TTATGTCTTTATTTTAAAATTGG	99	1	exon:AI5_BETA	26	24	60	80	GrafOK
+ target27_chrmt_24518:24668	123forw	GTATTTATAAATTATATTAATGG	99	6	exon:AI5_BETA	19	6	68	77	GrafOK

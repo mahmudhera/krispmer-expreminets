@@ -1,0 +1,9 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_intergenic_11_3_98495290:98495440	123rev	ATATGGACGGGGTGTAATGAGGG	85	63	intergenic:Gm10681-Hsd3b5	50	42	70	81	GrafOK
+ target_intergenic_11_3_98495290:98495440	124rev	GATATGGACGGGGTGTAATGAGG	81	107	intergenic:Gm10681-Hsd3b5	39	38	70	83	GrafOK
+ target_intergenic_11_3_98495290:98495440	7rev	ATTCAGTCCTCACTCACAACTGG	73	123	intergenic:Gm10681-Hsd3b5	49	20	79	63	GrafOK
+ target_intergenic_11_3_98495290:98495440	1rev	TCCTCACTCACAACTGGTCATGG	65	173	intergenic:Gm10681-Hsd3b5	48	15	64	77	GrafOK
+ target_intergenic_11_3_98495290:98495440	67rev	CTATAAACAATATTCACAATTGG	59	362	intergenic:Gm10681-Hsd3b5	36	21	59	69	GrafOK
+ target_intergenic_11_3_98495290:98495440	92rev	TCTACAGCATAAAAATTAGGTGG	54	159	intergenic:Gm10681-Hsd3b5	60	29	68	75	GrafOK
+ target_intergenic_11_3_98495290:98495440	95rev	TTATCTACAGCATAAAAATTAGG	51	267	intergenic:Gm10681-Hsd3b5	36	28	73	71	GrafOK
+ target_intergenic_11_3_98495290:98495440	39rev	CACAAAAGTCACTGTATAGTTGG	38	254	intergenic:Gm10681-Hsd3b5	41	15	66	82	GrafOK

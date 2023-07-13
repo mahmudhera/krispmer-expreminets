@@ -1,0 +1,3 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target59_chrIV_1100258:1100408	33forw	TGTGGTATGGAAGAAGTTCGTGG	3	44	exon:YDR210C-D/YDR210C-C	65	59	75	85	tt
+ target59_chrIV_1100258:1100408	37forw	GTATGGAAGAAGTTCGTGGATGG	3	45	exon:YDR210C-D/YDR210C-C	69	47	77	88	GrafOK
