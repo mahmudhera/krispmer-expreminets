@@ -143,7 +143,7 @@ def main():
             for potential_off_target in sequences_with_one_distance:
                 num_occurrences_in_target += target_sequence.count(potential_off_target) + target_sequence.count(reverse_complement(potential_off_target))
                 num_occurrences_in_genome += qf_genome[jellyfish.MerDNA(potential_off_target)] + qf_genome[jellyfish.MerDNA(reverse_complement(potential_off_target))]
-            ot_count_1_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
+            ot_count_2_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
 
             print(str(target_file).split('/')[-1], grna, ot_count_0_mismatch, ot_count_1_mismatch, ot_count_2_mismatch)
             # <target_filename, grna, ot_count, type> add this to the summary file
