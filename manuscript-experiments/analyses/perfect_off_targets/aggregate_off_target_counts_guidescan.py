@@ -112,7 +112,7 @@ def main():
                     candidate_grnas.append(candidate_grna)
 
             # count their appearences
-            print(candidate_grnas)
+            #print(candidate_grnas)
             num_occurrences_in_target = 0
             for grna in candidate_grnas:
                 num_occurrences_in_target += target_sequence.count(grna)+target_sequence.count(reverse_complement(grna))
@@ -121,10 +121,10 @@ def main():
             # count their appearences
             num_occurrences_in_genome = 0
             for grna in candidate_grnas:
-                num_occurrences_in_genome += qf_genome[jellyfish.MerDNA(grna)] + qf_genome[jellyfish.MerDNA(grna)]
+                num_occurrences_in_genome += qf_genome[jellyfish.MerDNA(grna)] + qf_genome[jellyfish.MerDNA(reverse_complement(grna))]
 
-            print(num_occurrences_in_target)
-            print(num_occurrences_in_genome)
+            #print(num_occurrences_in_target)
+            #print(num_occurrences_in_genome)
             # find off target count
             ot_count_0_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
 
