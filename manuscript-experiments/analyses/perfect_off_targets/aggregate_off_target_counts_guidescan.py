@@ -146,6 +146,7 @@ def main():
             ot_count_2_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
 
             print(str(target_file).split('/')[-1], grna_orig, ot_count_0_mismatch, ot_count_1_mismatch, ot_count_2_mismatch)
+            print(candidate_grnas)
             # <target_filename, grna, ot_count, type> add this to the summary file
 
 if __name__ == '__main__':
