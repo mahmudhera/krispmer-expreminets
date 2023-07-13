@@ -87,7 +87,7 @@ def main():
         # every line after that is a grna
         grna_list = []
         for line in lines[1:]:
-            grna_list.append( line.upper() )
+            grna_list.append( line.upper().strip() )
 
         # load the target seq
         tgt_f = open(target_file, 'r')
