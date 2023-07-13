@@ -3,6 +3,8 @@ import os
 from itertools import chain, combinations, product
 import pandas as pd
 
+specificity_cutoff = 60
+
 def complement(seq):
     """
     generates the complement sequence, e.g.: ACGT-->TCGA
@@ -51,10 +53,15 @@ def main():
         df_grnas = pd.read_csv(grna_file, delimiter='\t')
         df_off_targets = pd.read_csv(off_target_file, delimiter='\t')
 
-        grnas = df_grnas['targetSeq'].tolist()
-        off_target_counts = df_grnas['offtargetCount'].tolist()
+        grnas = df_grnas['guideId'].tolist()
+        off_target_counts = df_grnas['mitSpecScore'].tolist()
+        specificity_scores = df_grnas['targetSeq'].tolist()
 
-        for grna, off_target_count in list(zip(grnas, off_target_counts)):
+        for grna, off_target_count, specificity_score in list(zip(grnas, off_target_counts, specificity_scores)):
+            if str(specificity_score) == 'None':
+                continue
+            if float(specificity_score) < specificity_cutoff:
+                continue
             df_this_grna = df_off_targets[ df_off_targets['guideSeq']==grna ]
             num_mismatches_list = df_this_grna['mismatchCount'].tolist()
             a = num_mismatches_list.count(0)
