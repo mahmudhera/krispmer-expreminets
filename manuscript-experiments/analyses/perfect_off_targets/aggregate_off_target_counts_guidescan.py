@@ -66,7 +66,6 @@ def main():
     target_dir_name = args.target_dir_name
     grna_dir_name = args.grna_dir_name
     genome_jf_filename = args.genome_jf_filename
-    cutoff_score = args.cutoff_score
 
     # jellyfish query file
     qf_genome = jellyfish.QueryMerFile(genome_jf_filename)
