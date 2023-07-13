@@ -112,6 +112,7 @@ def main():
                     candidate_grnas.append(candidate_grna)
 
             # count their appearences
+            print(candidate_grnas)
             num_occurrences_in_target = 0
             for grna in candidate_grnas:
                 num_occurrences_in_target += target_sequence.count(grna)+target_sequence.count(reverse_complement(grna))
@@ -122,6 +123,8 @@ def main():
             for grna in candidate_grnas:
                 num_occurrences_in_genome += qf_genome[jellyfish.MerDNA(grna)] + qf_genome[jellyfish.MerDNA(grna)]
 
+            print(num_occurrences_in_target)
+            print(num_occurrences_in_genome)
             # find off target count
             ot_count_0_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
 
@@ -146,7 +149,6 @@ def main():
             ot_count_2_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
 
             print(str(target_file).split('/')[-1], grna_orig, ot_count_0_mismatch, ot_count_1_mismatch, ot_count_2_mismatch)
-            print(candidate_grnas)
             # <target_filename, grna, ot_count, type> add this to the summary file
 
 if __name__ == '__main__':
