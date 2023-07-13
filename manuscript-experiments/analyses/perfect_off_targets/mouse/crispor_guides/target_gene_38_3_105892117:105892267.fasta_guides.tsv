@@ -1,0 +1,6 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_gene_38_3_105892117:105892267	106rev	CATCTACTTCTCATTAGCTGTGG	71	223	intergenic:Ovgp1/Wdr77-Ovgp1	57	26	67	82	GrafOK
+ target_gene_38_3_105892117:105892267	23rev	TAGTATTTTCAACACTTTGAGGG	60	274	intergenic:Ovgp1/Wdr77-Ovgp1	36	26	65	77	GrafOK
+ target_gene_38_3_105892117:105892267	24rev	ATAGTATTTTCAACACTTTGAGG	59	298	intergenic:Ovgp1/Wdr77-Ovgp1	50	13	61	81	tt
+ target_gene_38_3_105892117:105892267	69rev	TATATGACTCTTATCTTTCTTGG	46	340	intergenic:Ovgp1/Wdr77-Ovgp1	20	25	63	77	tt
+ target_gene_38_3_105892117:105892267	63forw	CTATTTATTTTTCTTGAATGAGG	40	804	intergenic:Ovgp1/Wdr77-Ovgp1	55	39	62	90	GrafOK

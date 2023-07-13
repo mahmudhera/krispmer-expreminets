@@ -1,0 +1,5 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_duplicated_5_NC_000010.11_49773320:49773470	112forw	GTAAGGATTTTATTAGTTCTTGG	37	331	intergenic:OGDHL-PARG	36	35	63	85	tt
+ target_duplicated_5_NC_000010.11_49773320:49773470	80forw	CATTTTTTACTTGAATCAGATGG	17	401	intergenic:OGDHL-PARG	49	29	65	73	GrafOK
+ target_duplicated_5_NC_000010.11_49773320:49773470	95forw	TCAGATGGTGTCATTTAGTAAGG	17	172	intergenic:OGDHL-PARG	40	59	62	83	GrafOK
+ target_duplicated_5_NC_000010.11_49773320:49773470	125rev	ACATGTAGAAAAAGAAAGTCTGG	17	776	intergenic:OGDHL-PARG	43	27	56	80	GrafOK

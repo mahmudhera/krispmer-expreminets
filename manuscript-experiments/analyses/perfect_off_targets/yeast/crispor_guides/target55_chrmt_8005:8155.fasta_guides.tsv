@@ -1,0 +1,4 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target55_chrmt_8005:8155	145forw	AGTTGAAATACAGTTACCGTAGG	100	1	exon:15S_RRNA	63	30	76	76	GrafOK
+ target55_chrmt_8005:8155	146forw	GTTGAAATACAGTTACCGTAGGG	100	0	exon:15S_RRNA	57	50	78	80	GrafOK
+ target55_chrmt_8005:8155	147forw	TTGAAATACAGTTACCGTAGGGG	100	1	exon:15S_RRNA	68	51	78	81	GrafOK

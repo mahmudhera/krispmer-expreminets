@@ -1,0 +1,2 @@
+seqId	guideId	guideSeq	offtargetSeq	mismatchPos	mismatchCount	mitOfftargetScore	cfdOfftargetScore	chrom	start	end	strand	locusDesc
+ target65_chrXV_832337:832487	125forw	CTGTTCTGGGCGCTTCTCACAGG	CTGTACTTGGCGCTTTTCGCCGG	....*..*.......*..*.	4	0.0814414556962	0.0360576923438	chrXII	553184	553206	-	exon:HMX1

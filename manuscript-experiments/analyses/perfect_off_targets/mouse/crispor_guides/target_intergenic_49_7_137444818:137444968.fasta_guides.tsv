@@ -1,0 +1,9 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_intergenic_49_7_137444818:137444968	96rev	TCAAGCACATACAGCCCACCAGG	79	112	intergenic:Glrx3-U6	52	41	57	80	GrafOK
+ target_intergenic_49_7_137444818:137444968	94rev	AAGCACATACAGCCCACCAGGGG	63	288	intergenic:Glrx3-U6	71	75	48	72	GrafOK
+ target_intergenic_49_7_137444818:137444968	95rev	CAAGCACATACAGCCCACCAGGG	62	259	intergenic:Glrx3-U6	70	58	50	65	GrafOK
+ target_intergenic_49_7_137444818:137444968	82forw	TCAGAGCTGTGTAGGTTCTGAGG	55	323	intergenic:Glrx3-U6	65	55	55	83	GrafOK
+ target_intergenic_49_7_137444818:137444968	101forw	GAGGATGCTGCTGCCCCTGGTGG	51	385	intergenic:Glrx3-U6	49	79	53	63	GrafOK
+ target_intergenic_49_7_137444818:137444968	102forw	AGGATGCTGCTGCCCCTGGTGGG	51	331	intergenic:Glrx3-U6	46	77	62	74	GrafOK
+ target_intergenic_49_7_137444818:137444968	74forw	TGCAGAGATCAGAGCTGTGTAGG	49	408	intergenic:Glrx3-U6	61	51	67	86	GrafOK
+ target_intergenic_49_7_137444818:137444968	98forw	TCTGAGGATGCTGCTGCCCCTGG	48	388	intergenic:Glrx3-U6	34	59	50	67	GrafOK

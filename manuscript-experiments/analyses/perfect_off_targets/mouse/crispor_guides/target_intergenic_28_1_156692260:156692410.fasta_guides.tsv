@@ -1,0 +1,13 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_intergenic_28_1_156692260:156692410	21rev	GTCACTGGAGAGCAATCTTAAGG	78	170	intergenic:Angptl1-Ralgps2	35	39	60	73	tt
+ target_intergenic_28_1_156692260:156692410	20rev	TCACTGGAGAGCAATCTTAAGGG	77	173	intergenic:Angptl1-Ralgps2	48	33	62	78	GrafOK
+ target_intergenic_28_1_156692260:156692410	19rev	CACTGGAGAGCAATCTTAAGGGG	76	173	intergenic:Angptl1-Ralgps2	47	37	61	76	GrafOK
+ target_intergenic_28_1_156692260:156692410	2rev	AAGGGGTTTGTTGAGGGATTTGG	75	206	intergenic:Angptl1-Ralgps2	26	76	56	67	GrafOK
+ target_intergenic_28_1_156692260:156692410	9rev	CAATCTTAAGGGGTTTGTTGAGG	72	118	intergenic:Angptl1-Ralgps2	53	27	58	61	GrafOK
+ target_intergenic_28_1_156692260:156692410	112rev	GAATAGTTTGGCAAGTGTCAAGG	72	152	intergenic:Angptl1-Ralgps2	56	33	62	78	GrafOK
+ target_intergenic_28_1_156692260:156692410	8rev	AATCTTAAGGGGTTTGTTGAGGG	71	159	intergenic:Angptl1-Ralgps2	49	32	60	72	GrafOK
+ target_intergenic_28_1_156692260:156692410	66forw	GGACAAATGAATGCTGCTAATGG	71	191	intergenic:Angptl1-Ralgps2	58	42	58	73	GrafOK
+ target_intergenic_28_1_156692260:156692410	124rev	TTGTGTAGAGAGGAATAGTTTGG	68	209	intergenic:Angptl1-Ralgps2	42	60	67	80	GrafOK
+ target_intergenic_28_1_156692260:156692410	36rev	CATTCATTTGTCCTTGTCACTGG	67	211	intergenic:Angptl1-Ralgps2	39	38	56	76	GrafOK
+ target_intergenic_28_1_156692260:156692410	45forw	AAGATTGCTCTCCAGTGACAAGG	67	178	intergenic:Angptl1-Ralgps2	66	35	55	73	GrafOK
+ target_intergenic_28_1_156692260:156692410	103rev	GGCAAGTGTCAAGGAAAAATTGG	61	228	intergenic:Angptl1-Ralgps2	30	34	56	67	GrafOK

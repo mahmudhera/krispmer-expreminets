@@ -1,0 +1,16 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target67_chrX_478678:478828	41rev	TACTGCGGAAACTGTGATTGTGG	4	29	exon:YPR158W-A/YPR158W-B	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target67_chrX_478678:478828	5rev	TACATAGGCGACATTTGATAAGG	3	32	exon:YPL257W-A/YPL257W-B	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target67_chrX_478678:478828	20rev	GGCCCAGGTGGAAAGTACATAGG	3	32	exon:YDR098C-B/YDR098C-A	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target67_chrX_478678:478828	32rev	AACTGTGATTGTGGCCCAGGTGG	3	32	exon:YLR157C-B/YLR157C-A	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target67_chrX_478678:478828	35rev	GGAAACTGTGATTGTGGCCCAGG	3	32	exon:YHR214C-B/YHR214C-C	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target67_chrX_478678:478828	37forw	TCGCCTATGTACTTTCCACCTGG	3	32	exon:YDR210C-D/YDR210C-C	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target67_chrX_478678:478828	38forw	CGCCTATGTACTTTCCACCTGGG	3	32	exon:YPR137C-B/YPR137C-A	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target67_chrX_478678:478828	56rev	CCAACTGATGATGGATACTGCGG	3	30	exon:YDR316W-A/YDR316W-B	64	56	44	66	GrafOK
+ target67_chrX_478678:478828	65rev	AGAGGCGTTCCAACTGATGATGG	3	29	exon:YDR365W-A/YDR365W-B	53	21	57	62	GrafOK
+ target67_chrX_478678:478828	76forw	CCGCAGTATCCATCATCAGTTGG	3	29	exon:YNL284C-B/YNL284C-A	56	39	52	71	GrafOK
+ target67_chrX_478678:478828	83rev	TCAGGTGATGGAGTGCTCAGAGG	3	44	exon:YLR256W-A	70	78	55	84	GrafOK
+ target67_chrX_478678:478828	95rev	GTATTACCTGACTCAGGTGATGG	3	32	exon:YJR026W/YJR027W	57	56	50	70	GrafOK
+ target67_chrX_478678:478828	101rev	GTAAATGTATTACCTGACTCAGG	3	32	exon:YLR157C-B/YLR157C-A	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target67_chrX_478678:478828	109forw	AGCACTCCATCACCTGAGTCAGG	3	32	exon:YOL103W-A/YOL103W-B	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target67_chrX_478678:478828	138forw	ATTTACTGATTCATCCTCAGCGG	3	29	exon:YMR050C/YMR051C	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK

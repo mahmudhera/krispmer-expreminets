@@ -1,0 +1,3 @@
+seqId	guideId	guideSeq	offtargetSeq	mismatchPos	mismatchCount	mitOfftargetScore	cfdOfftargetScore	chrom	start	end	strand	locusDesc
+ target55_chrmt_8005:8155	145forw	AGTTGAAATACAGTTACCGTAGG	GGTTTAAATACAGTTACCCAAGG	*...*.............**	4	0.219695862676	0.0756465517125	chrXV	428242	428264	+	exon:YOR053W/VHS3/YOR055W
+ target55_chrmt_8005:8155	147forw	TTGAAATACAGTTACCGTAGGGG	TCGAAATAAACTTACCGTAATGG	.*......*.*........*	4	0.236507827025	0.29518950457	chrXIV	315102	315124	-	exon:APC1/YNL171C/YNL170W/PSD1

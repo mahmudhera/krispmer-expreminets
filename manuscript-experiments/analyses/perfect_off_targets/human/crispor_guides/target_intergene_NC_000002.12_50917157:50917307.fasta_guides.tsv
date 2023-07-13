@@ -1,0 +1,6 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_intergene_NC_000002.12_50917157:50917307.fasta	45forw	ACACAGGCATTTCAACAGTAAGG	77	183	exon:NRXN1	45	42	77	91	GrafOK
+ target_intergene_NC_000002.12_50917157:50917307.fasta	46forw	CACAGGCATTTCAACAGTAAGGG	76	200	exon:NRXN1	55	51	75	78	GrafOK
+ target_intergene_NC_000002.12_50917157:50917307.fasta	21rev	ACTGTTGAAATGCCTGTGTTTGG	65	207	exon:NRXN1	44	49	64	84	tt
+ target_intergene_NC_000002.12_50917157:50917307.fasta	110forw	TATTATTATGAAACTAAATGAGG	46	550	exon:NRXN1	65	17	65	82	GrafOK
+ target_intergene_NC_000002.12_50917157:50917307.fasta	29forw	TTTGTATATGCACCAAACACAGG	10	2043	exon:NRXN1	58	55	64	83	GrafOK

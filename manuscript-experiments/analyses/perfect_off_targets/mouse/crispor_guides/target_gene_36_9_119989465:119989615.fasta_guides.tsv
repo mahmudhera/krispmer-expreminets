@@ -1,0 +1,5 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_gene_36_9_119989465:119989615	62rev	AAAATCAGCTGGGCAGAAGCAGG	53	326	intron:Mobp	49	46	61	72	GrafOK
+ target_gene_36_9_119989465:119989615	72rev	GAAAATGGTAAAAATCAGCTGGG	53	335	intron:Mobp	63	26	68	84	GrafOK
+ target_gene_36_9_119989465:119989615	73rev	AGAAAATGGTAAAAATCAGCTGG	47	588	intron:Mobp	44	-7	68	72	GrafOK
+ target_gene_36_9_119989465:119989615	87rev	GAGAGACAGAGAGAAGAAAATGG	0	0		48	65	71	82	GrafOK

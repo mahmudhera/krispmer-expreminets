@@ -1,0 +1,5 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target26_chrXIV_615449:615599	78forw	TTTGTTCGATAAAGAATATAAGG	100	0	exon:IDP3	32	31	67	81	GrafOK
+ target26_chrXIV_615449:615599	3rev	ATTTTTCAGAATAGTGTTTTTGG	99	5	exon:IDP3	20	42	68	77	tt
+ target26_chrXIV_615449:615599	90forw	AGAATATAAGGAAAAGTTTCAGG	99	2	exon:IDP3	27	25	58	74	tt
+ target26_chrXIV_615449:615599	132forw	GCATCGTTTGATTGATGATATGG	92	3	exon:IDP3	37	27	75	73	GrafOK

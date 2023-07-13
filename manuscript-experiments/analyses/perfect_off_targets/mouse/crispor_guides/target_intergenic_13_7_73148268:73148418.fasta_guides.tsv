@@ -1,0 +1,7 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_intergenic_13_7_73148268:73148418	60rev	CTTCTCATTGGAATTTGCTGAGG	64	276	intron:Chd2	46	19	63	72	GrafOK
+ target_intergenic_13_7_73148268:73148418	38forw	TTTCTCTAAGATAAAGTCCAAGG	57	316	intron:Chd2	62	40	65	75	GrafOK
+ target_intergenic_13_7_73148268:73148418	117rev	AATTTAGAAACTGAATAAACAGG	49	395	intron:Chd2	32	31	67	83	GrafOK
+ target_intergenic_13_7_73148268:73148418	55rev	CATTGGAATTTGCTGAGGTCTGG	48	264	intron:Chd2	36	37	72	76	GrafOK
+ target_intergenic_13_7_73148268:73148418	72rev	AACAAGTCTTTTCTTCTCATTGG	46	362	intron:Chd2	32	32	67	76	GrafOK
+ target_intergenic_13_7_73148268:73148418	35rev	TGGAAATATGCTTGATTCCTTGG	40	447	intron:Chd2	36	33	65	82	tt

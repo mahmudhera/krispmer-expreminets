@@ -1,0 +1,4 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_NC_001144.5_485930:486080	35rev	TCGAAGTATCATCGCTACTTTGG	25	3	intergenic:RDN5-5/YLR159C-A-ASP3-4	39	34	74	67	tt
+ target_NC_001144.5_485930:486080	62forw	AGCGATGATACTTCGATGTTTGG	25	3	intergenic:RDN5-5/YLR159C-A-ASP3-4	38	28	69	85	tt
+ target_NC_001144.5_485930:486080	75rev	ATGATTTCTAATATTCACATAGG	25	4	intergenic:RDN5-5/YLR159C-A-ASP3-4	64	44	65	81	GrafOK

@@ -1,0 +1,16 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target75_chrXVI_57080:57230	43rev	TACTGCGGAAACTGTGATTGTGG	4	29	exon:YGR038C-B/YGR038C-A	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target75_chrXVI_57080:57230	7rev	TACATAGGCGACATTTGATAAGG	3	32	exon:YNL054W-A/YNL054W-B	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target75_chrXVI_57080:57230	22rev	GGCCCAGGTGGAAAGTACATAGG	3	32	exon:YLR256W-A	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target75_chrXVI_57080:57230	34rev	AACTGTGATTGTGGCCCAGGTGG	3	32	exon:YMR050C/YMR051C	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target75_chrXVI_57080:57230	37rev	GGAAACTGTGATTGTGGCCCAGG	3	32	exon:YDR210C-D/YDR210C-C	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target75_chrXVI_57080:57230	39forw	TCGCCTATGTACTTTCCACCTGG	3	32	exon:YGR161C-D/YGR161C-C	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target75_chrXVI_57080:57230	40forw	CGCCTATGTACTTTCCACCTGGG	3	32	exon:YOL103W-A/YOL103W-B	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target75_chrXVI_57080:57230	58rev	CCAACTGATGATGGATACTGCGG	3	30	exon:YDR261C-D/YDR261C-C	64	56	44	66	GrafOK
+ target75_chrXVI_57080:57230	67rev	AGAGGCGTTCCAACTGATGATGG	3	29	exon:YML040W/YML039W	53	21	57	62	GrafOK
+ target75_chrXVI_57080:57230	78forw	CCGCAGTATCCATCATCAGTTGG	3	29	exon:YLR227W-A/YLR227W-B	56	39	52	71	GrafOK
+ target75_chrXVI_57080:57230	85rev	TCAGGTGATGGAGTGCTCAGAGG	3	44	exon:YOL103W-A/YOL103W-B	70	78	55	84	GrafOK
+ target75_chrXVI_57080:57230	97rev	GTATTACCTGACTCAGGTGATGG	3	32	exon:YPL257W-A/YPL257W-B	57	56	50	70	GrafOK
+ target75_chrXVI_57080:57230	103rev	GTAAATGTATTACCTGACTCAGG	3	32	exon:YLR256W-A	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target75_chrXVI_57080:57230	111forw	AGCACTCCATCACCTGAGTCAGG	3	32	exon:YPR137C-B/YPR137C-A	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+ target75_chrXVI_57080:57230	140forw	ATTTACTGATTCATCCTCAGCGG	3	29	exon:YDR316W-A/YDR316W-B	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK

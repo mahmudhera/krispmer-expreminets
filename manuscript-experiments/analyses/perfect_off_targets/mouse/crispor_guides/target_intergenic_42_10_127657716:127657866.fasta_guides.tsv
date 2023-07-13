@@ -1,0 +1,8 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+ target_intergenic_42_10_127657716:127657866	26forw	TCTCCTGGTTTGCAAGGCAAAGG	42	220	intergenic:Rdh16-Rdh18-ps	58	56	61	66	GrafOK
+ target_intergenic_42_10_127657716:127657866	9rev	TTTCCTTTGCCTTGCAAACCAGG	29	252	intergenic:Rdh16-Rdh18-ps	40	21	70	80	GrafOK
+ target_intergenic_42_10_127657716:127657866	127forw	ATCTTTTGCAACATTAACTTTGG	4	258	intergenic:Rdh16-Rdh18-ps	29	15	74	78	tt
+ target_intergenic_42_10_127657716:127657866	70rev	ATATCTGTCCTCATGGCAAGAGG	3	430	intergenic:Rdh16-Rdh18-ps	60	46	64	82	GrafOK
+ target_intergenic_42_10_127657716:127657866	77rev	AATTCTAATATCTGTCCTCATGG	3	382	intergenic:Rdh16-Rdh18-ps	54	11	60	72	GrafOK
+ target_intergenic_42_10_127657716:127657866	128forw	TCTTTTGCAACATTAACTTTGGG	3	346	intergenic:Rdh16-Rdh18-ps	37	36	72	78	tt
+ target_intergenic_42_10_127657716:127657866	82forw	GCTTAGTTCCTCTTGCCATGAGG	1	385	intergenic:Rdh16-Rdh18-ps	71	23	55	85	GrafOK
