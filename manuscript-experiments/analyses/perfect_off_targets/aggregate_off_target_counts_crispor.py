@@ -55,7 +55,7 @@ def main():
         off_target_counts = df_grnas['offtargetCount'].tolist()
 
         for grna, off_target_count in list(zip(grnas, off_target_counts)):
-            df_this_grna = df_off_targets[ df['guideSeq']==grna ]
+            df_this_grna = df_off_targets[ df_off_targets['guideSeq']==grna ]
             num_mismatches_list = df_this_grna['mismatchCount'].tolist()
             a = num_mismatches_list.count(0)
             b = num_mismatches_list.count(1)
