@@ -18,5 +18,5 @@ if __name__ == '__main__':
                     target_counter += 1
                     f = open(target_name, 'w')
                     f.write('> ' + record.id + '\n')
-                    f.write(record.seq)
+                    f.write(str(record.seq))
                     f.close()
