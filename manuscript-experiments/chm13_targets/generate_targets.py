@@ -12,4 +12,5 @@ if __name__ == '__main__':
         for record in SeqIO.parse(handle, "fasta"):
             for transcript_id in transcript_ids:
                 if transcript_id in record.id:
-                    print(record.id)
+                    print('> ' + record.id)
+                    print(record.seq)
