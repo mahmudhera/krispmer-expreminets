@@ -1,0 +1,3 @@
+krispmer reads.fastq chm13_targets/target_1.fasta chm13_results/scores_target_1.fasta 3 -nv -J mer_counts.jf -H k_spectrum_histo
+krispmer reads.fastq chm13_targets/target_2.fasta chm13_results/scores_target_2.fasta 3 -nv -J mer_counts.jf -H k_spectrum_histo
+krispmer reads.fastq chm13_targets/target_3.fasta chm13_results/scores_target_3.fasta 3 -nv -J mer_counts.jf -H k_spectrum_histo
