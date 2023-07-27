@@ -52,7 +52,7 @@ def get_all_files(directory):
 
 def generate_scores_filename(target_filename_with_path):
     splitted = target_filename_with_path.split('/')
-    return '/'.join(splitted[:-2] + ['krispmer_guides','scores_'+splitted[-1]])
+    return '/'.join(splitted[:-2] + ['krispmer_grnas','scores_'+splitted[-1]])
 
 def main():
     # take command line arguments
