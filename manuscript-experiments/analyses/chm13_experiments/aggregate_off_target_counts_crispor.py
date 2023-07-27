@@ -83,6 +83,8 @@ def main():
     for target_file, grna_file, off_target_file in target_files_and_grna_files:
         df_grnas = pd.read_csv(grna_file, delimiter='\t')
         grnas = df_grnas['guideId'].tolist()
+        off_target_counts = df_grnas['mitSpecScore'].tolist()
+        specificity_scores = df_grnas['targetSeq'].tolist()
 
         # get the target sequence
         tgt_f = open(target_file, 'r')
@@ -91,7 +93,11 @@ def main():
         target_sequence = ''.join( [line.strip().upper() for line in lines[1:]] )
         #print(target_sequence)
 
-        for grna in grnas:
+        for grna, off_target_count, specificity_score in list(zip(grnas, off_target_counts, specificity_scores)):
+            if str(specificity_score) == 'None':
+                continue
+            if float(specificity_score) < specificity_cutoff:
+                continue
             if len(grna) != 23:
                 continue
 
