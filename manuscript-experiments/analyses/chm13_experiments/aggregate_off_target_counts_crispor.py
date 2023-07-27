@@ -27,7 +27,7 @@ def get_all_files(directory):
 
 def generate_scores_filename(target_filename_with_path):
     splitted = target_filename_with_path.split('/')
-    return '/'.join(splitted[:-2] + ['crispor_guides', splitted[-1]+'_guides.tsv'])
+    return '/'.join(splitted[:-2] + ['crispor_grnas', splitted[-1]+'_guides.tsv'])
 
 def generate_off_target_filename(target_filename_with_path):
     splitted = target_filename_with_path.split('/')
