@@ -107,7 +107,7 @@ def main():
                 num_occurrences_in_genome += qf_genome[jellyfish.MerDNA(potential_off_target)] + qf_genome[jellyfish.MerDNA(reverse_complement(potential_off_target))]
             ot_count_1_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
 
-            sequences_with_two_distance = set(generate_adjacent_mers(tgt_in_plus, 2))
+            sequences_with_two_distance = set(generate_adjacent_mers(grna, 2))
             num_occurrences_in_target = 0
             num_occurrences_in_genome = 0
             for potential_off_target in sequences_with_one_distance:
