@@ -13,11 +13,11 @@ if __name__ == '__main__':
 
     with open(exons_filename) as handle:
         for record in SeqIO.parse(handle, "fasta"):
-            for transcript_id in transcript_ids:
+            for transcript_id in transcript_ids[:30]:
                 if transcript_id in record.id:
                     target_name = f'target_{target_counter}_{transcript_id}.fasta'
                     target_counter += 1
                     f = open(target_name, 'w')
                     f.write('> ' + record.id + '_' + transcript_id + '\n')
-                    f.write(str(record.seq))
+                    f.write(str(record.seq) + '\n')
                     f.close()
