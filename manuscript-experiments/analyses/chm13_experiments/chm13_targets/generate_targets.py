@@ -18,6 +18,6 @@ if __name__ == '__main__':
                     target_name = f'target_{target_counter}_{transcript_id}.fasta'
                     target_counter += 1
                     f = open(target_name, 'w')
-                    f.write('> ' + target_name + '\n')
+                    f.write('>' + target_name + '\n')
                     f.write(str(record.seq) + '\n')
                     f.close()
