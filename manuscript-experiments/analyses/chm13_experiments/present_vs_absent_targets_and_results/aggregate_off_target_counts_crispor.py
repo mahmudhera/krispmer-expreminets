@@ -30,10 +30,6 @@ def generate_scores_filename(target_filename_with_path):
     splitted = target_filename_with_path.split('/')
     return '/'.join(splitted[:-2] + ['crispor_grnas', splitted[-1]+'_guides.tsv'])
 
-def generate_off_target_filename(target_filename_with_path):
-    splitted = target_filename_with_path.split('/')
-    return '/'.join(splitted[:-2] + ['crispor_grnas', splitted[-1]+'_off_targets.tsv'])
-
 def hamming_circle(s, n, alphabet):
     """Generate strings over alphabet whose Hamming distance from s is
     exactly n.
@@ -77,10 +73,10 @@ def main():
 
     target_files_and_grna_files = []
     for target_file in get_all_files(target_dir_name):
-        target_files_and_grna_files.append((target_file, generate_scores_filename(target_file), generate_off_target_filename(target_file)))
+        target_files_and_grna_files.append((target_file, generate_scores_filename(target_file), generate_scores_filename(target_file)))
     # list all target and grna files
 
-    for target_file, grna_file, off_target_file in target_files_and_grna_files:
+    for target_file, grna_file, _ in target_files_and_grna_files:
         df_grnas = pd.read_csv(grna_file, delimiter='\t')
         grnas = df_grnas['guideId'].tolist()
         off_target_counts = df_grnas['mitSpecScore'].tolist()
