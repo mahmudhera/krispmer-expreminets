@@ -122,6 +122,7 @@ def main():
             num_occurrences_in_genome = 0
             for grna in candidate_grnas:
                 num_occurrences_in_genome += qf_genome[jellyfish.MerDNA(grna)] + qf_genome[jellyfish.MerDNA(reverse_complement(grna))]
+            num_occurrences_of_grna_in_genome = num_occurrences_in_genome
 
             #print(num_occurrences_in_target)
             #print(num_occurrences_in_genome)
@@ -148,7 +149,7 @@ def main():
                 num_occurrences_in_genome += qf_genome[jellyfish.MerDNA(potential_off_target)] + qf_genome[jellyfish.MerDNA(reverse_complement(potential_off_target))]
             ot_count_2_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
 
-            print(str(target_file).split('/')[-1], grna_orig, ot_count_0_mismatch, ot_count_1_mismatch, ot_count_2_mismatch)
+            print(str(target_file).split('/')[-1], grna_orig, ot_count_0_mismatch, ot_count_1_mismatch, ot_count_2_mismatch, num_occurrences_of_grna_in_genome)
             # <target_filename, grna, ot_count, type> add this to the summary file
 
 if __name__ == '__main__':

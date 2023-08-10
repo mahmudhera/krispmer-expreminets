@@ -25,18 +25,22 @@ for target_id in range(num_targets):
     off_target_counts_1_mm = list([0]*len(methods))
     off_target_counts_2_or_more_mm = list([0]*len(methods))
 
+    methods_to_num_occurrences_dict = {}
+
     for i in range( len(methods) ):
         method_name = methods[i]
         aggregated_filename = f'{file_str}{method_name}'
-        df = pd.read_csv(aggregated_filename, delimiter=' ', header=None, names=['target_name', 'grna', 'a', 'b', 'c'])
+        df = pd.read_csv(aggregated_filename, delimiter=' ', header=None, names=['target_name', 'grna', 'a', 'b', 'c', 'num_occurrences_of_grna_in_genome'])
         df = df[ df['target_name']==f'target_{target_id+1}.fasta' ]
         targets = df['target_name'].tolist()
         grnas = df['grna'].tolist()
         a_s = df['a'].tolist()
         b_s = df['b'].tolist()
         c_s = df['c'].tolist()
+        num_occurrences_of_grna_in_genome_list = df['num_occurrences_of_grna_in_genome'].tolist()
+        methods_to_num_occurrences_dict[method_name] = num_occurrences_of_grna_in_genome_list
 
-        for target_name, grna, a, b, c in list(zip(targets, grnas, a_s, b_s, c_s)):
+        for target_name, grna, a, b, c, num_occurrences_of_grna_in_genome in list(zip(targets, grnas, a_s, b_s, c_s, num_occurrences_of_grna_in_genome_list)):
             if a+b+c == 0:
                 off_target_counts_2_or_more_mm[i] += 1
                 continue
@@ -58,5 +62,15 @@ for target_id in range(num_targets):
     plt.xlabel('gRNA finding tools')
     plt.ylabel('Number of gRNAs identified')
     plt.title(f'gRNAs identified by tools for transcript id {transcript_ids[target_id]}')
+    plt.savefig(pdf_filename)
+    plt.clf()
+
+    pdf_filename = f'num_occurrences_plot_target_{target_id+1}.pdf'
+    fig, ax = plt.subplots()
+    ax.boxplot(methods_to_num_occurrences_dict.values())
+    ax.set_xticklabels(methods_to_num_occurrences_dict.keys())
+    plt.xlabel('gRNA finding tools')
+    plt.ylabel('Number of occurrences of the gRNAs in CHM13')
+    plt.title(f'Number of times the gRNAs appear in CHM13 for transcript: {transcript_ids[target_id]}')
     plt.savefig(pdf_filename)
     plt.clf()

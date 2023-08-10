@@ -104,6 +104,7 @@ def main():
             num_occurrences_in_target = target_sequence.count(grna)+target_sequence.count(reverse_complement(grna))
             num_occurrences_in_genome = qf_genome[jellyfish.MerDNA(grna)] + qf_genome[jellyfish.MerDNA(reverse_complement(grna))]
             ot_count_0_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
+            num_occurrences_of_grna_in_genome = num_occurrences_in_genome
 
             sequences_with_one_distance = set(generate_adjacent_mers(grna, 1))
             num_occurrences_in_target = 0
@@ -121,7 +122,7 @@ def main():
                 num_occurrences_in_genome += qf_genome[jellyfish.MerDNA(potential_off_target)] + qf_genome[jellyfish.MerDNA(reverse_complement(potential_off_target))]
             ot_count_2_mismatch = max(0, num_occurrences_in_genome - num_occurrences_in_target)
 
-            print(str(target_file).split('/')[-1], grna, ot_count_0_mismatch, ot_count_1_mismatch, ot_count_2_mismatch)
+            print(str(target_file).split('/')[-1], grna, ot_count_0_mismatch, ot_count_1_mismatch, ot_count_2_mismatch, num_occurrences_of_grna_in_genome)
 
 if __name__ == '__main__':
     main()
