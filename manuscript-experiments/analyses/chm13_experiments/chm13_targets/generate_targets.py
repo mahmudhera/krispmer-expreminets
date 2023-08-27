@@ -27,6 +27,8 @@ if __name__ == '__main__':
         random.shuffle(all_record_ids)
         selected_record_ids = all_record_ids[:100]
 
+        print(selected_record_ids)
+
         for record in SeqIO.parse(handle, "fasta"):
             if str(record.id) in selected_record_ids:
                 target_name = f'target_{target_counter}_{transcript_id}.fasta'
