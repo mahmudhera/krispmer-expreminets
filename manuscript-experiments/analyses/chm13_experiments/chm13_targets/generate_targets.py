@@ -5,7 +5,7 @@ import random
 random.seed(0)
 
 exons_filename = '/home/atif/human_assemblies_kmer_count/exons.fa'
-handpicked_transcript_ids = ['ENST00000375050', 'ENST00000261405', 'ENST00000568530', 'ENST00000375050', 'ENST00000288050', 'ENST00000261405', 'ENST00000351205', 'ENST00000380742', 'ENST00000374312']
+handpicked_transcript_ids = ['ENST00000375050.6', 'ENST00000288050.9', 'ENST00000261405.10', 'ENST00000351205.8', 'ENST00000380742.8', 'ENST00000374312.5']
 
 if __name__ == '__main__':
     target_counter = 1
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     with open(exons_filename) as handle:
         for record in SeqIO.parse(handle, "fasta"):
             if str(record.id) in selected_record_ids:
-                target_name = f'target_{target_counter}_{transcript_id}.fasta'
+                target_name = f'target_{target_counter}_{record.id}.fasta'
                 target_counter += 1
                 f = open(target_name, 'w')
                 f.write('>' + target_name + '\n')
