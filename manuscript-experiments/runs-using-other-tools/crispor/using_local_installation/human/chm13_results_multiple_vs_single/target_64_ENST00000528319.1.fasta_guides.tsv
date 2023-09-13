@@ -1,0 +1,19 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+target_64_ENST00000528319.1.fasta_pilon	194rev	AAAATCCAATGTCTAGACGCTGG	90	105	exon:RP11-643G5.6	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	209forw	AGGTGCCAGCGTCTAGACATTGG	83	90	exon:RP11-643G5.6	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	187rev	AATGTCTAGACGCTGGCACCTGG	79	107	exon:RP11-643G5.6	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	182rev	CTAGACGCTGGCACCTGGTGAGG	63	213	exon:RP11-643G5.6	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	71rev	TAAAGGAGTAACAACACATTCGG	57	232	exon:RP11-643G5.6	48	43	71	84	tt
+target_64_ENST00000528319.1.fasta_pilon	181rev	TAGACGCTGGCACCTGGTGAGGG	51	228	exon:RP11-643G5.6	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	46forw	AGCTGGTGCTAGTTATGGTCTGG	48	82	exon:RP11-643G5.6	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	88rev	CATGTGGAGAGACGATGTAAAGG	47	124	intergenic:FOLH1-OR4C13	51	60	70	77	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	151forw	GCCTGCTGGATTCGAAGAGATGG	46	136	exon:RP11-643G5.6	49	58	63	77	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	41forw	GCTGCAGCTGGTGCTAGTTATGG	45	182	intergenic:FOLH1-OR4C13	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	132rev	GCCATCTCTTCGAATCCAGCAGG	45	95	exon:RP11-643G5.6	57	17	69	84	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	47forw	GCTGGTGCTAGTTATGGTCTGGG	44	127	intergenic:FOLH1-OR4C13	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	109forw	CTTTACATCGTCTCTCCACATGG	40	155	exon:RP11-643G5.6	58	24	65	85	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	29forw	CTCAAATGGCTGGCTGCAGCTGG	39	183	exon:RP11-643G5.6	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	60forw	ATGGTCTGGGATCTCAGATGAGG	37	243	intergenic:FOLH1-OR4C13	67	76	69	79	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	137forw	ACTTCTCACAGCATGCCTGCTGG	36	284	intergenic:FOLH1-OR4C13	49	6	72	92	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	104rev	TGTGAGAAGTTCAAGCCATGTGG	35	298	intergenic:FOLH1-OR4C13	83	37	70	84	GrafOK
+target_64_ENST00000528319.1.fasta_pilon	189forw	AAATCAAGAAGACCCTCACCAGG	23	547		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK

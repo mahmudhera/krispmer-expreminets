@@ -1,0 +1,10 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+target_12_ENST00000363301.1.fasta_pilon	84forw	CAACCCCCCACTGCTAAATTTGG	11	178	exon:ZNF436-AS1/ZNF436/Y_RNA	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_12_ENST00000363301.1.fasta_pilon	88forw	CCCCCACTGCTAAATTTGGCTGG	11	201		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_12_ENST00000363301.1.fasta_pilon	69rev	GCCAGCCAAATTTAGCAGTGGGG	6	236		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_12_ENST00000363301.1.fasta_pilon	67rev	CAGCCAAATTTAGCAGTGGGGGG	4	252		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_12_ENST00000363301.1.fasta_pilon	68rev	CCAGCCAAATTTAGCAGTGGGGG	4	232		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_12_ENST00000363301.1.fasta_pilon	70rev	AGCCAGCCAAATTTAGCAGTGGG	4	246	intergenic:MYSM1-AL136985.1	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_12_ENST00000363301.1.fasta_pilon	71rev	AAGCCAGCCAAATTTAGCAGTGG	4	257	exon:Y_RNA	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_12_ENST00000363301.1.fasta_pilon	8rev	TTCTGATAACCCACTACCATTGG	3	219	exon:ATP5G3/Y_RNA	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_12_ENST00000363301.1.fasta_pilon	57forw	AACATTAGTGTCACTAAAGTTGG	3	298	exon:RNY4P34	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
