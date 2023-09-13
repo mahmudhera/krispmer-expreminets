@@ -1,0 +1,4 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+target_19_ENST00000363952.1.fasta_pilon	77rev	ATGTGTAGTAGTGAGAAGAAAGG	26	457		NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_19_ENST00000363952.1.fasta_pilon	61rev	AGAAAGGAAAGAGTAGAACAAGG	12	1621	exon:Y_RNA	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_19_ENST00000363952.1.fasta_pilon	6rev	TTGAGTTAACTCACTACCTTTGG	5	318	exon:Y_RNA	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	tt

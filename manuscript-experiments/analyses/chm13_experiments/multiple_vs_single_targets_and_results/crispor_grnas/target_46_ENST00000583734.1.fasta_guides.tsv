@@ -1,0 +1,2 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+target_46_ENST00000583734.1.fasta_pilon	37rev	TTAACAGAACAAAATAGTTCTGG	48	394	exon:MIR4652	40	3	66	78	tt

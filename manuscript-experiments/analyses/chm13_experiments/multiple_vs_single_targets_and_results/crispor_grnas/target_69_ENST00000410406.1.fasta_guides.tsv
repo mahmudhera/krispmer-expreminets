@@ -1,0 +1,7 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+target_69_ENST00000410406.1.fasta_pilon	62rev	CTTGGCATGTCATCTTGTGCAGG	75	119	exon:RNU6-174P	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_69_ENST00000410406.1.fasta_pilon	61rev	TTGGCATGTCATCTTGTGCAGGG	70	178	exon:RNU6-174P	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_69_ENST00000410406.1.fasta_pilon	60rev	TGGCATGTCATCTTGTGCAGGGG	65	170	exon:RNU6-174P	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_69_ENST00000410406.1.fasta_pilon	80rev	AGAGAGAGCGAGCACACACTTGG	53	375	exon:RNU6-174P	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_69_ENST00000410406.1.fasta_pilon	32forw	GGCAGCACGTATACTAAAATTGG	1	1023	intergenic:MIR5692C2-OCM2	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	NotEnoughFlankSeq	GrafOK
+target_69_ENST00000410406.1.fasta_pilon	57forw	TGATACAAAGAAGATTAGCATGG	1	1282	exon:RNU6-74P	66	7	79	83	GrafOK
