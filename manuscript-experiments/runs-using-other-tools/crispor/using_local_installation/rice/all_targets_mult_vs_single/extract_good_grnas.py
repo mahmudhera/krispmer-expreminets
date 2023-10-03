@@ -23,7 +23,7 @@ for kmer in df[0].tolist():
     # extract the specificity score
     spec_score = float( line.split('\t')[3] )
     print(kmer, spec_score)
-    f_out.write(kmer + '\t' + spec_score + '\n')
+    f_out.write(kmer + '\t' + str(spec_score) + '\n')
     f_out.flush()
 
 f_out.close()
