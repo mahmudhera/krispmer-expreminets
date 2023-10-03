@@ -11,6 +11,7 @@ i = 1
 total = len(df[0].tolist())
 for kmer in df[0].tolist():
     print('Handling '+str(i)+'/'+str(total)+':')
+    i += 1
     f = open('tmp.fasta', 'w')
     f.write('>target\n')
     f.write(kmer+'\n')
