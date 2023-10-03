@@ -9,8 +9,10 @@ f_out = open('grnas_and_spec_scores', 'w')
 f_out.write('grna \t spec_score\n')
 
 i = 1
-total = len(df[0].tolist())
-for kmer in random.shuffle(df[0].tolist()):
+kmer_list = list(df[0].tolist())
+total = len(kmer_list)
+random.shuffle(kmer_list)
+for kmer in kmer_list:
     print('Handling '+str(i)+'/'+str(total)+':')
     i += 1
     f = open('tmp.fasta', 'w')
