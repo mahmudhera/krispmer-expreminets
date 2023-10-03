@@ -6,7 +6,7 @@ df = pd.read_csv('multiple_v_single.txt', header=None, delimiter='\t')
 i = 1
 total = len(df[0].tolist())
 for kmer in tqdm(df[0].tolist()):
-    print(f'Handling {i}/{total}:')
+    print('Handling '+str(i)+'/'+str(total)+':')
     f = open('tmp.fasta', 'w')
     f.write('>target\n')
     f.write(kmer+'\n')
