@@ -1,6 +1,7 @@
 import pandas as pd
 import subprocess
 import os
+import random
 
 df = pd.read_csv('multiple_v_single.txt', header=None, delimiter='\t')
 
@@ -9,7 +10,7 @@ f_out.write('grna \t spec_score\n')
 
 i = 1
 total = len(df[0].tolist())
-for kmer in df[0].tolist():
+for kmer in random.shuffle(df[0].tolist()):
     print('Handling '+str(i)+'/'+str(total)+':')
     i += 1
     f = open('tmp.fasta', 'w')
