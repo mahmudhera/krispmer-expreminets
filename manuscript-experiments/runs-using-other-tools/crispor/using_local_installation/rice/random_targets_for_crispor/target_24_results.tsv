@@ -1,0 +1,2 @@
+#seqId	guideId	targetSeq	mitSpecScore	offtargetCount	targetGenomeGeneLocus	Doench '16-Score	Moreno-Mateos-Score	Out-of-Frame-Score	Lindel-Score
+target_24	21forw	AGTTAACGAGAAATCTATTGTGG	37	42	Chr3 30.62 Mbp	46	17	79	77	GrafOK
