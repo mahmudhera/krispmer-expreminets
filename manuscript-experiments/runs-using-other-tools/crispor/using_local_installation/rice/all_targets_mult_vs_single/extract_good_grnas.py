@@ -4,6 +4,9 @@ import os
 
 df = pd.read_csv('multiple_v_single.txt', header=None, delimiter='\t')
 
+f_out = open('grnas_and_spec_scores', 'w')
+f_out.write('grna \t spec_score\n')
+
 i = 1
 total = len(df[0].tolist())
 for kmer in df[0].tolist():
@@ -20,3 +23,7 @@ for kmer in df[0].tolist():
     # extract the specificity score
     spec_score = float( line.split('\t')[3] )
     print(kmer, spec_score)
+    f_out.write(kmer + '\t' + spec_score + '\n')
+    f_out.flush()
+
+f_out.close()
