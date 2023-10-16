@@ -4,8 +4,8 @@ import random
 
 random.seed(0)
 
-candidate_genes_list_filename = '~/oryza-sativa-genomes-and-counts/kmer_counts/genes_multiple_v_single_analysis_all.txt'
-sequences_filename = '~/oryza-sativa-genomes-and-counts/kmer_counts/cds_primary.fa'
+candidate_genes_list_filename = '/home/atif/oryza-sativa-genomes-and-counts/kmer_counts/genes_multiple_v_single_analysis_all.txt'
+sequences_filename = '/home/atif/oryza-sativa-genomes-and-counts/kmer_counts/cds_primary.fa'
 
 if __name__ == '__main__':
     # read all candidate genes list
@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     target_counter = 1
 
-    with open(exons_filename) as handle:
+    with open(sequences_filename) as handle:
         for record in SeqIO.parse(handle, "fasta"):
             for gene_name in gene_names_list:
                 if gene_name in record.id:
