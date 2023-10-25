@@ -58,13 +58,11 @@ def main():
     # take command line arguments
     parser = argparse.ArgumentParser(description='Process guidescan2 results.')
     parser.add_argument('target_dir_name', help='Full path to the directory containing all target sequences')
-    parser.add_argument('grna_dir_name', help='Full path to the directory containing all grnas')
     parser.add_argument('genome_jf_filename', help='Full path to the jellyfish counted file for the genome')
 
     args = parser.parse_args()
 
     target_dir_name = args.target_dir_name
-    grna_dir_name = args.grna_dir_name
     genome_jf_filename = args.genome_jf_filename
 
     # jellyfish query file
